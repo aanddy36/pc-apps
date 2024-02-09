@@ -1,0 +1,15 @@
+---
+interface Props {
+  path: string;
+}
+
+const { path } = Astro.props;
+---
+
+<a
+  href={path}
+  class="py-2 px-5 border-2 border-blue rounded-xl text-blue transition-colors
+ font-bold duration-200 hover:text-white hover:bg-blue cursor-pointer"
+>
+  <slot />
+</a>
