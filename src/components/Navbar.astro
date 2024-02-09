@@ -2,41 +2,47 @@
 import Button from "./Button.astro";
 import Picker from "./Picker.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import logoPcApps from "../assets/logo.png";
+import toggleBars from "../assets/toggle-bars.png";
+import { Image } from "astro:assets";
 
 const theLang = getLangFromUrl(Astro.url);
 const t = useTranslations(theLang);
+const activeLink = Astro.request.url.split("/")[4];
+/* console.log(activeLink); */
 ---
 
-<nav
-  class="border h-[80px] w-full flex py-5 px-10 items-center justify-between"
->
-  <a href={`/${theLang}/`} class="border">
-    <img src="./logo.png" width="121" height="70" alt={t("nav.altLogo")} />
+<nav class="border w-full flex py-5 px-10 items-center justify-between">
+  <a href={`/${theLang}`}>
+    <Image src={logoPcApps} alt={t("nav.altLogo")} width="140" />
   </a>
-  <ul class=" hidden laptop:flex gap-7 items-center">
+  <ul class="hidden laptop:flex gap-7 items-center">
     <a
-      href={`/${theLang}/`}
-      class="transition-all duration-200 hover:text-blue opacity-70 hover:opacity-100
-          hover:border-b-2 hover:border-b-blue border-2 border-transparent"
+      href={`/${theLang}`}
+      class={`transition-all duration-200 hover:text-blue
+          hover:border-b-2 hover:border-b-blue border-2 border-transparent 
+          ${!activeLink ? " text-blue border-b-2 border-b-blue" : "opacity-70"}`}
     >
       <li>{t("nav.home")}</li>
     </a>
     <a
-      href="/en/"
-      class="transition-all duration-200 hover:text-blue opacity-70 hover:opacity-100
-          hover:border-b-2 hover:border-b-blue border-2 border-transparent"
+      href={`/${theLang}/about`}
+      class={`transition-all duration-200 hover:text-blue
+        hover:border-b-2 hover:border-b-blue border-2 border-transparent 
+        ${activeLink === "about" ? " text-blue  border-b-2 border-b-blue" : " opacity-70"}`}
     >
       <li>{t("nav.whoweare")}</li>
     </a>
     <a
       href="/en"
-      class="transition-all duration-200 hover:text-blue opacity-70 hover:opacity-100
-          hover:border-b-2 hover:border-b-blue border-2 border-transparent"
+      class={`transition-all duration-200 hover:text-blue
+        hover:border-b-2 hover:border-b-blue border-2 border-transparent 
+        ${activeLink === "services" ? " text-blue border-b-2 border-b-blue" : "opacity-70"}`}
     >
       <li>{t("nav.services")}</li>
     </a>
   </ul>
-  <ul class=" hidden laptop:flex items-center gap-2">
+  <ul class="hidden laptop:flex items-center gap-2">
     <li>
       <Button path="/en">{t("nav.contactBtn")}</Button>
     </li>
@@ -44,7 +50,9 @@ const t = useTranslations(theLang);
       <Picker />
     </li>
   </ul>
-  <button class=" laptop:hidden">
-    <img src="./public/toggle-bars.png" />
+  <button
+    class="laptop:hidden transition-transform duration-200 hover:rotate-90"
+  >
+    <Image src={toggleBars} alt={t("nav.toggleBar")} width="22" />
   </button>
 </nav>

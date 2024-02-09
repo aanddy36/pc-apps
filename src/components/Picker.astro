@@ -12,20 +12,22 @@ const t = useTranslations(theLang);
 const currentPath = "/" + lang.split("/").slice(3).join("/");
 const spanishPath = getRelativeLocaleUrl("es", extraPaths.join("/"));
 const englishPath = getRelativeLocaleUrl("en", extraPaths.join("/"));
+/* const spanishPath = '/es' + extraPaths.join("/"); 
+const englishPath = '/en' + extraPaths.join("/");*/
 ---
 
 <select class="cursor-pointer px-4 py-1 bg-bg" id="picker">
   <option
     class="cursor-pointer"
     value={englishPath}
-    selected={englishPath === currentPath}
+    selected={englishPath === currentPath || englishPath === currentPath + "/"}
   >
     {t("picker.english")}
   </option>
   <option
     class="cursor-pointer"
     value={spanishPath}
-    selected={spanishPath === currentPath}
+    selected={spanishPath === currentPath || spanishPath === currentPath + "/"}
   >
     {t("picker.spanish")}
   </option>
