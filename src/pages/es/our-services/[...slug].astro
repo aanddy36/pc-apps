@@ -1,0 +1,28 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import Layout from "../../../layouts/Layout.astro"
+
+export const getStaticPaths = async () => {
+  const allServices = await getCollection("theServices", ({ id }) => {
+    return id.startsWith("es/");
+  });
+
+  const paths = allServices.map((page) => {
+    const [lang, ...slug] = page.slug.split("/");
+    return { params: { lang, slug: slug.join("/") || undefined }, props: page };
+  });
+  return paths;
+};
+type Props = CollectionEntry<'theServices'>
+const {lang, slug} = Astro.params;
+const theService = Astro.props
+console.log(theService);
+
+---
+<Layout
+  title="Home"
+  description="Home page, where you can find all the services we provide and know who we are"
+  path="en/"
+>
+  <h3>Hello</h3>
+</Layout>

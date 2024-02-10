@@ -1,0 +1,51 @@
+---
+import chevron from "../assets/down-arrow.png";
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { getCollection } from "astro:content";
+import CatDropdown from "../components/CatDropdown.astro";
+
+const theLang = getLangFromUrl(Astro.url);
+const allConsultories = await getCollection("theServices", ({ id }) => {
+  return id.startsWith(theLang + "/");
+});
+
+const filteredServices = allConsultories.map((serv) => serv.data);
+const categories = [...new Set(filteredServices.map((s) => s.group))];
+
+const t = useTranslations(theLang);
+const activeLink = Astro.request.url.split("/")[4];
+---
+
+<div class="relative">
+  <div
+    id="service"
+    class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[1]
+    hover:border-b-2 hover:border-b-blue border-2 border-transparent cursor-pointer
+    ${activeLink === "servicio" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
+  >
+    <li>{t("nav.services")}</li>
+    <Image src={chevron} alt="Arrow" />
+  </div>
+  <div class="absolute left-[-15px] top-[-15px] pt-14 hidden" id="dropdown-menu">
+    <ul
+      class="w-[300px] flex flex-col shadow-md shadow-black/30 rounded-lg bg-bg"
+    >
+      {
+        categories.map((cat) => {
+          return <CatDropdown category={cat} />;
+        })
+      }
+    </ul>
+  </div>
+</div>
+<script type="module">
+  const selector = document.getElementById("service");
+  const dropdown = document.getElementById("dropdown-menu");
+  selector.addEventListener("mouseenter", (e) => {
+    dropdown.style.display = "block"
+  });
+  dropdown.addEventListener("mouseleave", (e) => {
+    dropdown.style.display = "none"
+  });
+</script>

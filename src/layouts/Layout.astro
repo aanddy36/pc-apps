@@ -1,13 +1,15 @@
 ---
 import Button from "../components/Button.astro";
-import Navbar from "../components/Navbar.astro";
 import { NewNavbar } from "../components/NewNavbar";
 import Picker from "../components/Picker.astro";
 import { Image } from "astro:assets";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import logoPcApps from "../assets/logo.png";
+import { getCollection } from "astro:content";
+import ServiceDropdown from "../components/ServiceDropdown.astro"
 
 const theLang = getLangFromUrl(Astro.url);
+
 const t = useTranslations(theLang);
 const activeLink = Astro.request.url.split("/")[4];
 const link = Astro.request.url;
@@ -63,14 +65,7 @@ const URL = import.meta.env.PUBLIC_URL;
         >
           <li>{t("nav.whoweare")}</li>
         </a>
-        <a
-          href="/en"
-          class={`transition-all duration-200 hover:text-blue
-            hover:border-b-2 hover:border-b-blue border-2 border-transparent 
-            ${activeLink === "services" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
-        >
-          <li>{t("nav.services")}</li>
-        </a>
+        <ServiceDropdown />
       </ul>
       <ul class="hidden laptop:flex items-center gap-2">
         <li>

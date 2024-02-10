@@ -9,7 +9,6 @@ import { Image } from "astro:assets";
 const theLang = getLangFromUrl(Astro.url);
 const t = useTranslations(theLang);
 const activeLink = Astro.request.url.split("/")[4];
-/* console.log(activeLink); */
 ---
 
 <nav class="border w-full flex py-5 px-10 items-center justify-between">
