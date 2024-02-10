@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import { Sidebar } from "./Sidebar";
+import type { Service } from "../modals";
 
 export const NewNavbar = ({
   children,
   link,
+  allServices,
 }: {
   children: any;
   link: string;
+  allServices: Service[];
 }) => {
   const [openSidebar, setOpenSidebar] = useState(false);
 
@@ -53,6 +56,7 @@ export const NewNavbar = ({
         openSidebar={openSidebar}
         setOpenSidebar={setOpenSidebar}
         link={link}
+        allServices={allServices}
       />
     </>
   );

@@ -9,6 +9,9 @@ import { getCollection } from "astro:content";
 import ServiceDropdown from "../components/ServiceDropdown.astro"
 
 const theLang = getLangFromUrl(Astro.url);
+const allServices = await getCollection("theServices", ({ id }) => {
+  return id.startsWith(theLang + "/");
+});
 
 const t = useTranslations(theLang);
 const activeLink = Astro.request.url.split("/")[4];
@@ -43,8 +46,7 @@ const URL = import.meta.env.PUBLIC_URL;
     <title>{`PC APPS | ${title}`}</title>
   </head>
   <body class="bg-bg flex flex-col min-h-screen">
-    <!-- <Navbar /> -->
-    <NewNavbar link={link} client:load>
+    <NewNavbar link={link} allServices={allServices} client:load>
       <a href={`/${theLang}`}>
         <Image src={logoPcApps} alt={t("nav.altLogo")} width="140" />
       </a>

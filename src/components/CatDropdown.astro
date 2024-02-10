@@ -3,7 +3,7 @@ import { getLangFromUrl } from "../i18n/utils";
 import { getCollection } from "astro:content";
 
 const theLang = getLangFromUrl(Astro.url);
-const allConsultories = await getCollection("theServices", ({ id }) => {
+const allServices = await getCollection("theServices", ({ id }) => {
   return id.startsWith(theLang + "/");
 });
 
@@ -18,7 +18,7 @@ const { category } = Astro.props;
   <h5 class="font-semibold">{category}</h5>
   <div class="flex flex-col gap-2 pl-4 w-full">
     {
-      allConsultories
+      allServices
         .filter((cons) => cons.data.group === category)
         .map((service) => {
           return (

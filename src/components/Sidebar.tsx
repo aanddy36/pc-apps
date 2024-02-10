@@ -1,28 +1,41 @@
+import { useState } from "react";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import type { Service } from "../modals";
+import "../index.css";
 export const Sidebar = ({
   openSidebar,
   setOpenSidebar,
   link,
+  allServices,
 }: {
   openSidebar: boolean;
   setOpenSidebar: (value: boolean) => void;
   link: string;
+  allServices: Service[];
 }) => {
   const language = link.split("/")[3];
   const t = useTranslations(language as "es" | "en");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const path = link.split("/")[4];
   const extraPaths = link.split("/").slice(4);
   const currentPath = "/" + link.split("/").slice(3).join("/");
+  console.log(currentPath);
+  
+  const orgPath = currentPath === "/en" || currentPath === "/es" ? currentPath +"/" : currentPath
+  console.log(orgPath);
+  
   const spanishPath = "/es/" + extraPaths.join("/");
   const englishPath = "/en/" + extraPaths.join("/");
   const handleChange = (e: any) => {
     window.location.href = e.target.value;
   };
+  const filteredServices = allServices.map((serv) => serv.data);
+  const categories = [...new Set(filteredServices.map((s) => s.group))];
 
   return (
     <nav
-      className={`fixed top-0 left-0 h-full z-10 bg-bg laptop:hidden w-[200px]
+      className={`fixed top-0 left-0 h-full z-10 bg-bg laptop:hidden w-[300px] overflow-y-auto
        shadow-black/50 flex flex-col items-center gap-6 pt-16 transition-transform duration-200
        ${
          openSidebar
@@ -94,7 +107,7 @@ export const Sidebar = ({
         <select
           className="bg-bg w-[80px] cursor-pointer text-[14px]"
           onChange={(e) => handleChange(e)}
-          value={currentPath}
+          value={orgPath}
         >
           <option value={englishPath}>{t("picker.english")}</option>
           <option value={spanishPath}>{t("picker.spanish")}</option>
@@ -102,7 +115,7 @@ export const Sidebar = ({
       </div>
       <a href={`/${language}`} className="cursor-pointer">
         <svg
-          width="131"
+          width="161"
           height="70"
           viewBox="0 0 161 70"
           fill="none"
@@ -161,13 +174,81 @@ export const Sidebar = ({
             {t("nav.whoweare")}
           </span>
         </a>
-        <a
-          className="no-underline text-black  transition-all duration-200 hover:px-8 px-4 py-3 border-b
-          cursor-pointer"
-          onClick={() => setOpenSidebar(false)}
+        <div
+          className={`border-b border-[#7e7e7e3d] py-3  px-4 transiton duration-200 overflow-hidden 
+            ${
+              isDropdownOpen
+                ? "bg-[#7e7e7e3d] h-full"
+                : "bg-transparent h-[50px]"
+            }`}
         >
-          {t("nav.services")}
-        </a>
+          <button
+            className="flex w-full transiton duration-300 hover:pl-4 justify-between items-center"
+            onClick={() => setIsDropdownOpen((prev) => !prev)}
+          >
+            <span
+              className={`border-2 border-transparent ${
+                path === "our-services"
+                  ? "border-b-blue text-blue font-bold"
+                  : "border-b-transparent text-black"
+              }`}
+            >
+              {t("nav.services")}
+            </span>
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlnsXlink="http://www.w3.org/1999/xlink"
+            >
+              <rect width="12" height="12" fill="url(#pattern4)" />
+              <defs>
+                <pattern
+                  id="pattern4"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use xlinkHref="#image0_5_95" transform="scale(0.00195312)" />
+                </pattern>
+                <image
+                  id="image0_5_95"
+                  width="512"
+                  height="512"
+                  xlinkHref="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </button>
+          <ul className="flex flex-col">
+            {categories.map((category) => {
+              return (
+                <div key={category} className="flex flex-col gap-2 p-4">
+                  <h5 className="font-semibold">{category}</h5>
+                  <div className="flex flex-col gap-2 pl-4 w-full">
+                    {allServices
+                      .filter((cons) => cons.data.group === category)
+                      .map((service, index) => {
+                        return (
+                          <a
+                            key={index}
+                            href={`/${language}/our-services/${
+                              service.slug.split("/")[1]
+                            }`}
+                            className=" transition-all duration-200 hover:px-4 hover:text-blue"
+                          >
+                            {service.data.title}
+                          </a>
+                        );
+                      })}
+                  </div>
+                </div>
+              );
+            })}
+          </ul>
+        </div>
       </ul>
     </nav>
   );

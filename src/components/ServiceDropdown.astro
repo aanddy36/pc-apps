@@ -6,11 +6,11 @@ import { getCollection } from "astro:content";
 import CatDropdown from "../components/CatDropdown.astro";
 
 const theLang = getLangFromUrl(Astro.url);
-const allConsultories = await getCollection("theServices", ({ id }) => {
+const allServices = await getCollection("theServices", ({ id }) => {
   return id.startsWith(theLang + "/");
 });
 
-const filteredServices = allConsultories.map((serv) => serv.data);
+const filteredServices = allServices.map((serv) => serv.data);
 const categories = [...new Set(filteredServices.map((s) => s.group))];
 
 const t = useTranslations(theLang);
@@ -22,7 +22,7 @@ const activeLink = Astro.request.url.split("/")[4];
     id="service"
     class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[1]
     hover:border-b-2 hover:border-b-blue border-2 border-transparent cursor-pointer
-    ${activeLink === "servicio" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
+    ${activeLink === "our-services" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
   >
     <li>{t("nav.services")}</li>
     <Image src={chevron} alt="Arrow" />
