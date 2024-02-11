@@ -16,13 +16,11 @@ export const getStaticPaths = async () => {
 type Props = CollectionEntry<'theServices'>
 const {lang, slug} = Astro.params;
 const theService = Astro.props
-console.log(theService);
-
 ---
 <Layout
-  title="Home"
+  title={theService.data.title}
   description="Home page, where you can find all the services we provide and know who we are"
   path="en/"
 >
-  <h3>Hello</h3>
+  <h3>{theService.data.title}</h3>
 </Layout>

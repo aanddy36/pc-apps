@@ -1,0 +1,30 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { Image } from "astro:assets";
+import taxesLogo from "../assets/taxes.svg";
+import cooperation from "../assets/cooperation.svg";
+import pc from "../assets/pc.svg";
+import booking from "../assets/booking.svg";
+import Button from "./Button.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Props {
+  position: 1 | 2 | 3 | 4;
+  path: string;
+}
+
+const { position, path } = Astro.props;
+const imagesArray = [taxesLogo, cooperation, pc, booking];
+---
+
+<div class="flex flex-col items-center gap-5">
+  <Image
+    src={imagesArray[position - 1]}
+    alt={t(`home.serviceAlt${position}`)}
+  />
+  <h5 class="font-semibold text-2xl text-center">{t(`home.serviceTitle${position}`)}</h5>
+  <p class="font-light text-sm text-center">{t(`home.serviceDescr${position}`)}</p>
+  <Button path={`/${lang}/our-services/${path}`}>{t("home.serviceBtn")}</Button>
+</div>

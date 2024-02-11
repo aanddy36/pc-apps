@@ -71,14 +71,14 @@ const URL = import.meta.env.PUBLIC_URL;
       </ul>
       <ul class="hidden laptop:flex items-center gap-2">
         <li>
-          <Button path="/en">{t("nav.contactBtn")}</Button>
+          <Button path={`/${theLang}/contact`}>{t("nav.contactBtn")}</Button>
         </li>
         <li>
           <Picker />
         </li>
       </ul>
     </NewNavbar>
-    <div class="grow border-2">
+    <div class="grow">
       <slot />
     </div>
   </body>

@@ -20,14 +20,14 @@ const activeLink = Astro.request.url.split("/")[4];
 <div class="relative">
   <div
     id="service"
-    class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[1]
+    class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[10]
     hover:border-b-2 hover:border-b-blue border-2 border-transparent cursor-pointer
     ${activeLink === "our-services" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
   >
     <li>{t("nav.services")}</li>
     <Image src={chevron} alt="Arrow" />
   </div>
-  <div class="absolute left-[-15px] top-[-15px] pt-14 hidden" id="dropdown-menu">
+  <div class="absolute left-[-15px] top-[-15px] pt-14 hidden z-[5]" id="dropdown-menu">
     <ul
       class="w-[300px] flex flex-col shadow-md shadow-black/30 rounded-lg bg-bg"
     >
