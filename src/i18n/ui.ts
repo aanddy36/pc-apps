@@ -63,6 +63,17 @@ export const ui = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
     "home.aboutBtn": "Learn More",
     "home.aboutAlt": "About Us Image",
+    "about.presentTitle": "Who We Are?",
+    "about.presentSubtitle":
+      "We're on a mission of helping people all around the world",
+    "about.presentText":
+      "We seek to advise our clients, optimizing their tax situation to achieve financial success through effective strategic planning.",
+    "about.visionTitle": "Our Vision",
+    "about.visionText":
+      "Becoming the trusted partner for our clients in the field of tax preparation and strategic consulting. We aim to be an innovative and technologically advanced company that provides solutions to our clients to achieve their financial and growth goals.",
+    "about.missionTitle": "Nuestra Misión",
+    "about.missionText":
+      "Providing tax preparation services and strategic consulting to individuals and small businesses in the United States. We are committed to delivering comprehensive and personalized solutions that meet the highest standards of quality and professional ethics.",
   },
   es: {
     "nav.home": "Inicio",
@@ -122,5 +133,16 @@ export const ui = {
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
     "home.aboutBtn": "Ver Más",
     "home.aboutAlt": "Imágen Sobre Nosotros",
+    "about.presentTitle": "¿Quiénes Somos?",
+    "about.presentSubtitle":
+      "Estamos en una misión de ayudar personas por todo el mundo",
+    "about.presentText":
+      "Buscamos asesorar a nuestros clientes, optimizando su situación fiscal para alcanzar el éxito financiero a través de una planificación estartégica efectiva.",
+    "about.visionTitle": "Nuestra Visión",
+    "about.visionText":
+      "Convertirnos en el socio de confianza para nuestros clientes en el ámbito de la preparación de impuestos y la consultoría estratégica. Buscamos ser una empresa innovadora y tecnológicamente avanzada que brinden soluciones a nuestros clientes para lograr sus metas financieras y de crecimiento.",
+    "about.missionTitle": "Nuestra Misión",
+    "about.missionText":
+      "Brindar servicios de preparación de impuestos y consultoría estratégica a personas naturales y pe queñas empresas en Estados Unidos. Nos comprometemos a ofrecer soluciones integrales y personalizadas que cumplan con los más altos estándares de calidad y ética profesional.",
   },
 };

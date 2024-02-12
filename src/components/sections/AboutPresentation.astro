@@ -1,0 +1,51 @@
+---
+import { Image } from "astro:assets";
+import aboutFirst from "../../assets/imagess/about-us-1.jpg";
+import aboutSecond from "../../assets/imagess/about-us-2.jpg";
+import aboutThird from "../../assets/imagess/about-us-3.jpg";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section
+  class="grid grid-cols-1 laptop:grid-cols-2 gap-8 px-10 laptop:px-20 full:px-44 pt-16 pb-44
+ text-white bg-blue relative"
+>
+  <div class="flex flex-col items-start gap-5">
+    <h5 class="text-xl text-lightBlue font-semibold">
+      {t("about.presentTitle")}
+    </h5>
+    <h3 class="font-extrabold text-4xl max-w-[520px]">
+      {t("about.presentSubtitle")}
+    </h3>
+  </div>
+  <p
+    class="grid font-light text-lg opacity-70 place-content-center text-justify"
+  >
+    {t("about.presentText")}
+  </p>
+  <div class="absolute inset-x-0 flex justify-center gap-8 bottom-[-110px]">
+    <Image
+      src={aboutFirst}
+      alt={"About Us First Image"}
+      width="300"
+      height="220"
+    />
+    <Image
+      src={aboutSecond}
+      alt={"About Us Second Image"}
+      width="300"
+      height="220"
+      class="hidden laptop:block"
+    />
+    <Image
+      src={aboutThird}
+      alt={"About Us Third Image"}
+      width="300"
+      height="220"
+      class="hidden full:block"
+    />
+  </div>
+</section>
