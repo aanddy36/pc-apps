@@ -2,6 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import AboutPresentation from "../../components/sections/AboutPresentation.astro";
 import AboutVision from "../../components/sections/AboutVision.astro";
+import AboutSendEmail from "../../components/sections/AboutSendEmail.astro";
+import { AboutLocation } from "../../components/sections/AboutLocation";
+import { getLangFromUrl } from "../../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
 ---
 
 <Layout
@@ -11,4 +16,6 @@ import AboutVision from "../../components/sections/AboutVision.astro";
 >
   <AboutPresentation />
   <AboutVision />
+  <AboutSendEmail />
+  <AboutLocation lang={lang} client:only/>
 </Layout>
