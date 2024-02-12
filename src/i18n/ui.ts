@@ -15,6 +15,15 @@ export const ui = {
     "nav.toggleBar": "Open sidebar",
     "picker.spanish": "Spanish",
     "picker.english": "English",
+    "footer.allRights": "Copyright ©2024 All rights reserved",
+    "footer.description":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+    "footer.contact": "Contact",
+    "footer.connect": "Connect",
+    "footer.logoAlt": "PC APPS Logo",
+    "footer.fbAlt": "Facebook Logo",
+    "footer.igAlt": "Instagram Logo",
+    "footer.ytAlt": "YouTube Logo",
     "home.imageHeader1": "Do you need help with the preparation of your taxes?",
     "home.imageSubtext1":
       "The PC APPS expert team can provide you with personalized help in this overwhelming proccess",
@@ -48,6 +57,12 @@ export const ui = {
     "home.serviceTitle4": "Mobile Apps",
     "home.serviceDescr4":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "home.aboutTitle": "About Us",
+    "home.aboutSubtitle": "Who We Are",
+    "home.aboutDescrp":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+    "home.aboutBtn": "Learn More",
+    "home.aboutAlt": "About Us Image",
   },
   es: {
     "nav.home": "Inicio",
@@ -58,6 +73,15 @@ export const ui = {
     "nav.toggleBar": "Abrir menú lateral",
     "picker.spanish": "Español",
     "picker.english": "Inglés",
+    "footer.allRights": "Copyright ©2024 Todos los derechos reservados",
+    "footer.description":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+    "footer.contact": "Contacto",
+    "footer.connect": "Redes",
+    "footer.logoAlt": "Logo PC APPS",
+    "footer.fbAlt": "Logo de Facebook",
+    "footer.igAlt": "Logo de Instagram",
+    "footer.ytAlt": "Logo de YouTube",
     "home.imageHeader1":
       "¿Necesitas ayuda con la preparación de tus impuestos?",
     "home.imageSubtext1":
@@ -92,5 +116,11 @@ export const ui = {
     "home.serviceTitle4": "Apps Móviles",
     "home.serviceDescr4":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+    "home.aboutTitle": "Acerca De Nosotros",
+    "home.aboutSubtitle": "Quiénes Somos",
+    "home.aboutDescrp":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+    "home.aboutBtn": "Ver Más",
+    "home.aboutAlt": "Imágen Sobre Nosotros",
   },
 };

@@ -1,0 +1,32 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { Image } from "astro:assets";
+import aboutImg from "../../assets/imagess/home-4.png";
+import Button from "../../components/Button.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+---
+<section
+    class="px-8 full:px-16 py-16 flex flex-col-reverse laptop:flex-row gap-12 full:gap-28 items-center
+     w-full justify-center bg-sectionBg"
+  >
+    <Image src={aboutImg} alt={t("home.aboutAlt")} />
+    <div class="flex flex-col items-center gap-8 max-w-[550px]">
+      <div class="flex flex-col gap-[10px] items-center">
+        <h5 class="text-blue font-medium tablet:text-lg">
+          {t("home.aboutTitle")}
+        </h5>
+        <h3
+          class="text-black font-semibold text-center text-2xl tablet:text-4xl"
+        >
+          {t("home.aboutSubtitle")}
+        </h3>
+      </div>
+      <p class="text-justify">
+        {t("home.aboutDescrp")}
+      </p>
+      <Button path={`/${lang}/about`}>{t("home.aboutBtn")}</Button>
+    </div>
+  </section>

@@ -1,8 +1,8 @@
 import { useEffect, useState, type ChangeEvent } from "react";
-import { useTranslations } from "../i18n/utils";
-import { NextAndPrev } from "./myIcons/NextAndPrev";
-import { SingleImage } from "./SingleImage";
-import { SingleWindowCarousel } from "./SingleWindowCarousel";
+import { useTranslations } from "../../i18n/utils";
+import { NextAndPrev } from "../myIcons/NextAndPrev";
+import { SingleImage } from "../SingleImage";
+import { SingleWindowCarousel } from "../SingleWindowCarousel";
 
 export const CarouselSection = ({ lang }: { lang: "en" | "es" }) => {
   const t = useTranslations(lang);

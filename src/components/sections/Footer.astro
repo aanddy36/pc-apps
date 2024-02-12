@@ -1,0 +1,38 @@
+---
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import whiteLogo from "../../assets/white-logo.png";
+import fb from "../../assets/fb.svg";
+import ig from "../../assets/ig.svg";
+import yt from "../../assets/yt.svg";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<section class="flex flex-col items-center gap-10 laptop:gap-12 py-5 laptop:py-12 bg-blue text-white">
+  <div class="flex flex-col items-start gap-10 px-4 laptop:px-0 laptop:flex-row laptop:gap-16 w-full
+  laptop:w-fit">
+    <div class="flex flex-col gap-8 items-center laptop:items-start">
+      <Image src={whiteLogo} alt={t("footer.logoAlt")} />
+      <p class="font-light text-sm laptop:max-w-[430px] text-justify">
+        {t("footer.description")}
+      </p>
+    </div>
+    <div class="flex flex-col items-start gap-4 laptop:gap-5 max-w-[180px]">
+      <h5 class="font-semibold">{t("footer.contact")}</h5>
+      <p class="font-light text-sm">
+        7676 NW 186 th St., Suite 214. Miami, Fl. 33015
+      </p>
+      <p class="font-light text-sm">+1(123)-456-7890</p>
+      <p class="font-light text-sm">info@pcappsint.com</p>
+    </div>
+    <div class="flex flex-col items-start gap-4 laptop:gap-5">
+      <h5 class="font-semibold">{t("footer.connect")}</h5>
+      <Image src={fb} alt={t("footer.fbAlt")} />
+      <Image src={ig} alt={t("footer.igAlt")} />
+      <Image src={yt} alt={t("footer.ytAlt")} />
+    </div>
+  </div>
+  <span class="opacity-70 font-light text-sm">{t("footer.allRights")}</span>
+</section>
