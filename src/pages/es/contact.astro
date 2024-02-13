@@ -1,5 +1,11 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { ContactLocation } from "../../components/sections/ContactLocation";
+import { SmallForm } from "../../components/SmallForm.tsx";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout
@@ -7,5 +13,21 @@ import Layout from "../../layouts/Layout.astro";
   description="¡Ponte en contacto con nosotros para brindarte atención personalizada!"
   path="en/contact"
 >
-  <h3>Contáctanos</h3>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    {t("contact.header")}
+  </h1>
+  <main class="grid grid-cols-1 laptop:grid-cols-2">
+    <ContactLocation lang={lang} client:only />
+    <section
+      class="flex flex-col px-4 laptop:px-8 full:px-16 py-12 items-center gap-8 bg-sectionBg"
+    >
+      <p>
+        {t("contact.formText")}
+      </p>
+      <SmallForm lang={lang} client:only/>
+    </section>
+  </main>
 </Layout>

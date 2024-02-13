@@ -5,7 +5,7 @@ import { Resend } from "resend";
 
 const resend = new Resend(`${import.meta.env.EMAIL_KEY}`);
 
-export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
+export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   const { register, handleSubmit, reset } = useForm();
   const t = useTranslations(lang);
   
@@ -31,7 +31,8 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
 
   return (
     <form
-      className="w-full laptop:w-[80%] full:w-[750px] mx-auto rounded-lg bg-white p-5 tablet:p-7 flex flex-col gap-10"
+      className="w-full mx-auto rounded-lg bg-white p-5
+       tablet:p-7 flex flex-col gap-10"
       onSubmit={handleSubmit(sendEmail)}
     >
       <div className="flex flex-col gap-2 text-start">

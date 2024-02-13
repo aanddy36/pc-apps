@@ -91,6 +91,10 @@ export const ui = {
     "about.locationPinMsj": "PC APPS Main Office",
     "about.locationAddress": "Address",
     "about.locationPhone": "Phone",
+    "contact.header": "Contact",
+    "contact.locTitle": "Main Office - Miami, FL",
+    "contact.formText":
+      "Fill out the following form and receive advice from our team of professionals",
   },
   es: {
     "nav.home": "Inicio",
@@ -178,5 +182,9 @@ export const ui = {
     "about.locationPinMsj": "Oficina Principal PC APPS",
     "about.locationAddress": "Dirección",
     "about.locationPhone": "Teléfono",
+    "contact.header": "Contacto",
+    "contact.locTitle": "Sede Principal - Miami, FL",
+    "contact.formText":
+      "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
   },
 };
