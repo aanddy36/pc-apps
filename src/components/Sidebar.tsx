@@ -53,10 +53,14 @@ export const Sidebar = ({
       >
         <Close />
       </button>
-      <div className="w-full px-4 flex gap-1 items-center">
+
+      <a href={`/${language}`} className="cursor-pointer">
+        <Logo />
+      </a>
+      <div className="w-full px-4 flex gap-2 items-center border-y py-2 mt-4">
         <Translate />
         <select
-          className="bg-bg w-[80px] cursor-pointer text-[14px]"
+          className="bg-bg w-full cursor-pointer text-[14px]"
           onChange={(e) => handleChange(e)}
           value={orgPath}
         >
@@ -64,9 +68,6 @@ export const Sidebar = ({
           <option value={spanishPath}>{t("picker.spanish")}</option>
         </select>
       </div>
-      <a href={`/${language}`} className="cursor-pointer">
-        <Logo />
-      </a>
       <ul className=" flex flex-col w-full">
         <a
           href={`/${language}`}

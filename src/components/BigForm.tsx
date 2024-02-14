@@ -1,32 +1,47 @@
 import { useForm } from "react-hook-form";
 import { useTranslations } from "../i18n/utils";
-import { Email } from "./Email";
-import { Resend } from "resend";
-
-const resend = new Resend(`${import.meta.env.EMAIL_KEY}`);
+import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
-  const { register, handleSubmit, reset } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const t = useTranslations(lang);
-  
+
+  const notify = (text: string, success: boolean) => {
+    if (success) {
+      return toast.success(text, {
+        position: "top-center",
+      });
+    } else {
+      return toast.error(text, {
+        position: "top-center",
+      });
+    }
+  };
+
   const sendEmail = async (myForm: any) => {
     console.log(myForm);
     try {
-      const { data, error } = await resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "anchibro@hotmail.com",
-        subject: "Example Email",
-        react: <Email url="https://google.com" />,
-      });
-      if (error) {
-        return console.error({ error });
-      }
-      console.log({ data });
-      console.log("Hola");
-      
+      setIsLoading(true);
+      let newEmail = await axios.post(
+        `${import.meta.env.PUBLIC_BACKEND_URL}`,
+        myForm
+      );
+      notify(t("email.success"), true);
     } catch (error) {
       console.log(error);
+      notify(t("email.error"), false);
     }
+    setIsLoading(false);
+    reset();
   };
 
   return (
@@ -43,8 +58,15 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
           placeholder={t("about.formNamePlaceholder")}
           className=" py-2 px-5 bg-sectionBg placeholder:text-placeholder placeholder:text-sm 
           placeholder:font-semibold w-full rounded-xl"
-          {...register("name")}
+          {...register("name", {
+            required: t("about.formErrorName"),
+          })}
         />
+        {errors.name?.message && (
+          <p className=" text-red-500 font-medium">
+            {errors.name.message as string}
+          </p>
+        )}
       </div>
       <div className="flex flex-col gap-2 text-start">
         <label htmlFor="email" className=" font-medium">
@@ -56,8 +78,19 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
           placeholder={t("about.formEmailPlaceholder")}
           className=" py-2 px-5 bg-sectionBg placeholder:text-placeholder placeholder:text-sm 
           placeholder:font-semibold w-full rounded-xl"
-          {...register("email")}
+          {...register("email", {
+            required: t("about.formErrorEmail"),
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: t("about.formErrorEmail2"),
+            },
+          })}
         />
+        {errors.email?.message && (
+          <p className=" text-red-500 font-medium">
+            {errors.email.message as string}
+          </p>
+        )}
       </div>
       <div className="flex flex-col gap-2 text-start">
         <label htmlFor="phone" className=" font-medium">
@@ -69,8 +102,15 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
           placeholder={t("about.formPhonePlaceholder")}
           className=" py-2 px-5 bg-sectionBg placeholder:text-placeholder placeholder:text-sm 
           placeholder:font-semibold w-full rounded-xl"
-          {...register("phone")}
+          {...register("phone", {
+            required: t("about.formErrorPhone"),
+          })}
         />
+        {errors.phone?.message && (
+          <p className=" text-red-500 font-medium">
+            {errors.phone.message as string}
+          </p>
+        )}
       </div>
       <div className="flex flex-col gap-2 text-start">
         <label htmlFor="message" className=" font-medium">
@@ -81,15 +121,25 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
           placeholder={t("about.formMessagePlaceholder")}
           className=" py-2 px-5 bg-sectionBg placeholder:text-placeholder placeholder:text-sm 
           placeholder:font-semibold w-full rounded-xl h-48"
-          {...register("message")}
+          {...register("message", {
+            required: t("about.formErrorMsg"),
+          })}
         ></textarea>
+        {errors.message?.message && (
+          <p className=" text-red-500 font-medium">
+            {errors.message.message as string}
+          </p>
+        )}
       </div>
       <button
         className="py-2 px-5 border-2 border-blue rounded-xl text-blue transition-colors
-            font-bold duration-200 hover:text-white hover:bg-blue cursor-pointer"
+            font-bold duration-200 hover:text-white hover:bg-blue cursor-pointer
+            disabled:cursor-not-allowed disabled:bg-blue/30"
+        disabled={isLoading}
       >
-        {t("about.formBtn")}
+        {isLoading ? "Loading..." : t("about.formBtn")}
       </button>
+      <ToastContainer position="top-center" />
     </form>
   );
 };

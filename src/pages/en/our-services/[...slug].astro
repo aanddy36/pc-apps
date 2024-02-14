@@ -1,6 +1,10 @@
 ---
 import { getCollection, type CollectionEntry } from "astro:content";
-import Layout from "../../../layouts/Layout.astro"
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { SmallForm } from "../../../components/SmallForm";
+import { Image } from "astro:assets";
+import examp from "../../../assets/imagess/about-us-1.jpg";
 
 export const getStaticPaths = async () => {
   const allServices = await getCollection("theServices", ({ id }) => {
@@ -13,10 +17,11 @@ export const getStaticPaths = async () => {
   });
   return paths;
 };
-type Props = CollectionEntry<'theServices'>
-const {lang, slug} = Astro.params;
-const theService = Astro.props
-
+type Props = CollectionEntry<"theServices">;
+const { lang, slug } = Astro.params;
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+const theService = Astro.props;
 ---
 
 <Layout
@@ -24,5 +29,58 @@ const theService = Astro.props
   description="Home page, where you can find all the services we provide and know who we are"
   path={theService.slug}
 >
-  <h3>{theService.data.title}</h3>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+    font-extrabold text-center text-white"
+  >
+    {theService.data.title}
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-10 items-start"
+    >
+      <div class="w-full flex flex-col gap-3">
+        <h2 class="text-3xl laptop:text-4xl font-bold">
+          {theService.data.articleTitle1}
+        </h2>
+        <p class="text-left">{theService.data.articleText1}</p>
+      </div>
+      <img
+        src={theService.data.image}
+        alt={"Image"}
+        class="w-full h-[250px] laptop:h-[300px] tablet:h-[400px] rounded-lg"
+      />
+      {
+        theService.data.articleTitle2 && (
+          <div class="flex flex-col gap-3 w-full">
+            <h3 class="text-3xl font-semibold">
+              {theService.data.articleTitle2}
+            </h3>
+            <p class="text-left">{theService.data.articleText2}</p>
+            {theService.data.articleText3 && <p class="text-left">{theService.data.articleText3}</p>}
+          </div>
+        )
+      }
+      <p>{theService.data.articleListTitle}</p>
+      <ol class="flex flex-col items-start gap-1">
+        {
+          theService.data.articleItems.map((item) => {
+            return <li class=" list-disc list-inside">{item}</li>;
+          })
+        }
+      </ol>
+    </section>
+    <section
+      class="bg-sectionBg w-full laptop:min-w-[500px] flex flex-col items-center gap-8 px-4
+      laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
 </Layout>

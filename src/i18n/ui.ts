@@ -86,6 +86,11 @@ export const ui = {
     "about.formMessage": "Message",
     "about.formMessagePlaceholder": "Insert your message",
     "about.formBtn": "Send Message",
+    "about.formErrorName": "Please insert your name",
+    "about.formErrorEmail": "Please insert your email",
+    "about.formErrorEmail2": "Invalid email format",
+    "about.formErrorPhone": "Please insert your phone",
+    "about.formErrorMsg": "Please insert a message",
     "about.locationTitle": "Where We Are",
     "about.locationSubtitle": "Main Office - Miami, FL",
     "about.locationPinMsj": "PC APPS Main Office",
@@ -95,6 +100,8 @@ export const ui = {
     "contact.locTitle": "Main Office - Miami, FL",
     "contact.formText":
       "Fill out the following form and receive advice from our team of professionals",
+    "email.success": "Email succesfully sent",
+    "email.error": "Error sending email",
   },
   es: {
     "nav.home": "Inicio",
@@ -177,6 +184,11 @@ export const ui = {
     "about.formMessage": "Mensaje",
     "about.formMessagePlaceholder": "Ingrese su mensaje",
     "about.formBtn": "Enviar Mensaje",
+    "about.formErrorName": "Por favor ingrese su nombre",
+    "about.formErrorEmail": "Por favor ingrese su email",
+    "about.formErrorEmail2": "Formato inválido de email",
+    "about.formErrorPhone": "Por favor ingrese su teléfono",
+    "about.formErrorMsg": "Por favor ingrese su mensaje",
     "about.locationTitle": "Dónde Estamos",
     "about.locationSubtitle": "Sede Principal - Miami, FL",
     "about.locationPinMsj": "Oficina Principal PC APPS",
@@ -186,5 +198,7 @@ export const ui = {
     "contact.locTitle": "Sede Principal - Miami, FL",
     "contact.formText":
       "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
+    "email.success": "Email enviado exitosamente",
+    "email.error": "Error enviando email",
   },
 };
