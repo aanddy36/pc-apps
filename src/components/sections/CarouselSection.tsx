@@ -1,11 +1,9 @@
-import { useEffect, useState, type ChangeEvent } from "react";
-import { useTranslations } from "../../i18n/utils";
+import { useEffect, useState } from "react";
 import { NextAndPrev } from "../myIcons/NextAndPrev";
 import { SingleImage } from "../SingleImage";
 import { SingleWindowCarousel } from "../SingleWindowCarousel";
 
 export const CarouselSection = ({ lang }: { lang: "en" | "es" }) => {
-  const t = useTranslations(lang);
   const [translation, setTranslation] = useState(0);
   const [isOver, setIsOver] = useState(false);
   const imagCount = ["first", "second", "third"];

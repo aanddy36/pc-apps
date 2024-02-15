@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Sidebar } from "./Sidebar";
 import type { Service } from "../modals";
 

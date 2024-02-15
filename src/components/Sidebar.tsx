@@ -5,7 +5,6 @@ import "../index.css";
 import { Close } from "./myIcons/Close";
 import { Translate } from "./myIcons/Translate";
 import { Logo } from "./myIcons/Logo";
-import { ChevrownDown } from "./myIcons/ChevrownDown";
 import { ServicesSidebar } from "./ServicesSidebar";
 
 export const Sidebar = ({

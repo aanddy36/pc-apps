@@ -31,7 +31,7 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
     console.log(myForm);
     try {
       setIsLoading(true);
-      let newEmail = await axios.post(
+      await axios.post(
         `${import.meta.env.PUBLIC_BACKEND_URL}`,
         myForm
       );

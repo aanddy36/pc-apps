@@ -30,7 +30,7 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   const sendEmail = async (myForm: any) => {
     try {
       setIsLoading(true);
-      let newEmail = await axios.post(
+      await axios.post(
         `${import.meta.env.PUBLIC_BACKEND_URL}`,
         myForm
       );

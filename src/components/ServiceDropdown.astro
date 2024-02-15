@@ -42,10 +42,10 @@ const activeLink = Astro.request.url.split("/")[4];
 <script type="module">
   const selector = document.getElementById("service");
   const dropdown = document.getElementById("dropdown-menu");
-  selector.addEventListener("mouseenter", (e) => {
+  selector.addEventListener("mouseenter", () => {
     dropdown.style.display = "block"
   });
-  dropdown.addEventListener("mouseleave", (e) => {
+  dropdown.addEventListener("mouseleave", () => {
     dropdown.style.display = "none"
   });
 </script>

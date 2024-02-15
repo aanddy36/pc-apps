@@ -1,10 +1,8 @@
 ---
-import { getCollection, type CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import { SmallForm } from "../../../components/SmallForm";
-import { Image } from "astro:assets";
-import examp from "../../../assets/imagess/about-us-1.jpg";
 
 export const getStaticPaths = async () => {
   const allServices = await getCollection("theServices", ({ id }) => {
@@ -17,8 +15,6 @@ export const getStaticPaths = async () => {
   });
   return paths;
 };
-type Props = CollectionEntry<"theServices">;
-const { lang, slug } = Astro.params;
 const theLang = getLangFromUrl(Astro.url);
 const t = useTranslations(theLang as "en" | "es");
 const theService = Astro.props;
