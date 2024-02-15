@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import Layout from "../../../layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
 import { SmallForm } from "../../../components/SmallForm";
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 
 export const getStaticPaths = async () => {
   const allServices = await getCollection("theServices", ({ id }) => {
@@ -18,6 +20,14 @@ export const getStaticPaths = async () => {
 const theLang = getLangFromUrl(Astro.url);
 const t = useTranslations(theLang as "en" | "es");
 const theService = Astro.props;
+
+const images = import.meta.glob<{ default: ImageMetadata }>(
+  "/src/assets/imagess/*.{jpeg,jpg,png,gif}"
+);
+if (!images[theService.data.image])
+  throw new Error(
+    `"${theService.data.image}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`
+  );
 ---
 
 <Layout
@@ -41,10 +51,10 @@ const theService = Astro.props;
         </h2>
         <p class="text-left">{theService.data.articleText1}</p>
       </div>
-      <img
-        src={theService.data.image}
-        alt={"Image"}
-        class="w-full h-[250px] laptop:h-[300px] tablet:h-[400px] rounded-lg"
+      <Image
+        src={images[theService.data.image]()}
+        alt={"Service Image"}
+        class={`w-full h-[250px] laptop:h-[300px] tablet:h-[400px] rounded-lg`}
       />
       {
         theService.data.articleTitle2 && (
@@ -53,7 +63,9 @@ const theService = Astro.props;
               {theService.data.articleTitle2}
             </h3>
             <p class="text-left">{theService.data.articleText2}</p>
-            {theService.data.articleText3 && <p class="text-left">{theService.data.articleText3}</p>}
+            {theService.data.articleText3 && (
+              <p class="text-left">{theService.data.articleText3}</p>
+            )}
           </div>
         )
       }

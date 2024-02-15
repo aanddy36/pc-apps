@@ -2,6 +2,7 @@ import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useTranslations } from "../../i18n/utils";
+import location from "../../assets/location.svg";
 
 export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
   const t = useTranslations(lang);
@@ -54,7 +55,7 @@ export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
         </li>
         <li className="flex flex-col gap-1">
           <div className=" font-semibold text-lg flex items-center gap-3 tracking-wider">
-            <img src="/src/assets/phone.svg" alt="Location Ping" />{" "}
+            <img src={location.src} alt="Location Ping" />
             {t("about.locationPhone")}:
           </div>
           <span className="opacity-70">+1 (123) 456-7890</span>
