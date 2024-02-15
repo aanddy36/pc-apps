@@ -7,8 +7,8 @@ export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
   const t = useTranslations(lang);
 
   var greenIcon = L.icon({
-    iconUrl: "/src/assets/location-pin.png",
-    shadowUrl: "/src/assets/marker-shadow.png",
+    iconUrl: "/src/public/location-pin.png",
+    shadowUrl: "/src/public/marker-shadow.png",
     iconSize: [38, 38], // size of the icon
     shadowSize: [50, 64], // size of the shadow
     iconAnchor: [20, 32], // point of the icon which will correspond to marker's location
