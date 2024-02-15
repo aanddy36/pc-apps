@@ -1,4 +1,7 @@
 import { useTranslations } from "../i18n/utils";
+import home1 from "../assets/imagess/home-1.jpg";
+import home2 from "../assets/imagess/home-2.jpg";
+import home3 from "../assets/imagess/home-3.jpg";
 
 export const SingleImage = ({
   lang,
@@ -12,11 +15,7 @@ export const SingleImage = ({
   path: string;
 }) => {
   const t = useTranslations(lang);
-  const theImages = [
-    "/src/assets/imagess/home-1.jpg",
-    "/src/assets/imagess/home-2.jpg",
-    "/src/assets/imagess/home-3.jpg",
-  ];
+  const theImages = [home1.src, home2.src, home3.src];
   return (
     <section
       className="relative before:content-[''] before:absolute before:inset-0

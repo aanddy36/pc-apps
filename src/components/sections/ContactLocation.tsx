@@ -2,13 +2,16 @@ import { useTranslations } from "../../i18n/utils";
 import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import location from "../../assets/location.svg";
+import phone from "../../assets/phone.svg";
+import email from "../../assets/email.svg";
 
 export const ContactLocation = ({ lang }: { lang: "en" | "es" }) => {
   const t = useTranslations(lang);
 
   var greenIcon = L.icon({
-    iconUrl: "/src/assets/location-pin.png",
-    shadowUrl: "/src/assets/marker-shadow.png",
+    iconUrl: "/location-pin.png",
+    shadowUrl: "/marker-shadow.png",
     iconSize: [38, 38], // size of the icon
     shadowSize: [50, 64], // size of the shadow
     iconAnchor: [20, 32], // point of the icon which will correspond to marker's location
@@ -27,7 +30,7 @@ export const ContactLocation = ({ lang }: { lang: "en" | "es" }) => {
 
         <li className="flex flex-col gap-1 w-full">
           <div className="font-semibold text-lg flex items-center gap-3">
-            <img src="/src/assets/location.svg" alt="Location Ping" />{" "}
+            <img src={location.src} alt="Location Ping" />{" "}
             {t("about.locationAddress")}:
           </div>
           <span className="opacity-70">
@@ -36,14 +39,14 @@ export const ContactLocation = ({ lang }: { lang: "en" | "es" }) => {
         </li>
         <li className="flex flex-col gap-1 w-full">
           <div className="font-semibold text-lg flex items-center gap-3">
-            <img src="/src/assets/phone.svg" alt="Location Ping" />{" "}
+            <img src={phone.src} alt="Location Ping" />{" "}
             {t("about.locationPhone")}:
           </div>
           <span className="opacity-70">+1 (123) 456-7890</span>
         </li>
         <li className="flex flex-col gap-1 w-full">
           <div className="font-semibold text-lg flex items-center gap-3">
-            <img src="/src/assets/email.svg" alt="Location Ping" /> Email:
+            <img src={email.src} alt="Location Ping" /> Email:
           </div>
           <span className="opacity-70">info@pcappsint.com</span>
         </li>

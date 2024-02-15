@@ -9,9 +9,6 @@ export const CarouselSection = ({ lang }: { lang: "en" | "es" }) => {
   const imagCount = ["first", "second", "third"];
   const hrefs = ["personal-tax", "web-design", "digital-marketing"];
 
-  /*   useEffect(() => {
-    console.log(translation);
-  }, [translation]); */
   useEffect(() => {
     let myInterval: any;
     if (!isOver) {

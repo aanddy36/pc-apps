@@ -3,6 +3,8 @@ import L from "leaflet";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { useTranslations } from "../../i18n/utils";
 import location from "../../assets/location.svg";
+import phone from "../../assets/phone.svg";
+import email from "../../assets/email.svg";
 
 export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
   const t = useTranslations(lang);
@@ -45,7 +47,7 @@ export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
       <ul className=" flex items-start gap-y-14 gap-10 laptop:gap-20 flex-wrap justify-between laptop:justify-start">
         <li className="flex flex-col gap-1">
           <div className=" font-semibold text-lg flex items-center gap-3 tracking-wider">
-            <img src="/src/assets/location.svg" alt="Location Ping" />{" "}
+            <img src={location.src} alt="Location Ping" />{" "}
             {t("about.locationAddress")}:
           </div>
           <div className="flex flex-col opacity-70">
@@ -55,14 +57,14 @@ export const AboutLocation = ({ lang }: { lang: "en" | "es" }) => {
         </li>
         <li className="flex flex-col gap-1">
           <div className=" font-semibold text-lg flex items-center gap-3 tracking-wider">
-            <img src={location.src} alt="Location Ping" />
+            <img src={phone.src} alt="Location Ping" />{" "}
             {t("about.locationPhone")}:
           </div>
           <span className="opacity-70">+1 (123) 456-7890</span>
         </li>
         <li className="flex flex-col gap-1">
           <div className=" font-semibold text-lg flex items-center gap-3 tracking-wider">
-            <img src="/src/assets/email.svg" alt="Location Ping" /> Email:
+            <img src={email.src} alt="Location Ping" /> Email:
           </div>
           <span className="opacity-70">info@pcappsint.com</span>
         </li>
