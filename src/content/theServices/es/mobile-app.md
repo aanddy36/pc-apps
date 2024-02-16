@@ -2,6 +2,7 @@
 title: "Aplicaciones Móviles"
 group: "Tecnología"
 image: "/src/assets/imagess/mobile-app.jpg"
+description: "Desarrollamos aplicaciones móviles adaptadas a los requerimientos específicos de las empresas que buscan mejorar su productividad interna y la interacción con sus clientes."
 articleTitle1: "Apps Móviles"
 articleText1: "Desata el potencial de tu marca en la palma de la mano de tus usuarios y sé parte de la revolución móvil con nuestras soluciones personalizadas y orientadas al éxito. Desarrollamos aplicaciones móviles adaptadas a los requerimientos específicos de las empresas que buscan mejorar su productividad interna y la interacción con sus clientes."
 articleTitle2: "¿En qué consiste?"

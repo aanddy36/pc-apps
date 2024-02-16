@@ -26,5 +26,5 @@ const imagesArray = [taxesLogo, cooperation, pc, booking];
   />
   <h5 class="font-semibold text-2xl text-center">{t(`home.serviceTitle${position}`)}</h5>
   <p class="font-light text-sm text-center">{t(`home.serviceDescr${position}`)}</p>
-  <Button path={`/${lang}/our-services/${path}`}>{t("home.serviceBtn")}</Button>
+  <Button path={`${lang === "en" ? "" : "/es"}/our-services/${path}`}>{t("home.serviceBtn")}</Button>
 </div>

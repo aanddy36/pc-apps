@@ -2,6 +2,7 @@
 title: "Diseño Web"
 group: "Tecnología"
 image: "/src/assets/imagess/web-design.jpg"
+description: "Diseñamos páginas web atractivas y prácticas que denoten la identidad de tu marca. Nuestro equipo de diseñadores y desarrolladores web colabora estrechamente con tu empresa para comprender sus requerimientos y metas."
 articleTitle1: "Diseño Web"
 articleText1: "Nos destacamos en la elaboración de páginas web atractivas y prácticas que denoten la identidad de tu marca y propicien una conexión empática con los usuarios. Nuestro equipo de diseñadores y desarrolladores web colabora estrechamente con tu empresa para comprender sus requerimientos y metas, elaborando así un sitio web de fácil navegación y plenamente optimizado para los motores de búsqueda."
 articleTitle2: "¿En qué consiste?"

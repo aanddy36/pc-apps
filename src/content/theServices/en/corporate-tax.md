@@ -2,6 +2,7 @@
 title: "Corporate Tax"
 group: "Tax Services"
 image: "/src/assets/imagess/corporate-tax.jpg"
+description: "With our tax service, we help you maximize your benefits and minimize your tax worries. We'll be available for you all year round."
 articleTitle1: "Tax Service"
 articleText1: "At PC APPS, we understand that tax preparation can be a complicated and overwhelming process. That's why we offer personalized and professional TAX Service to help you maximize your benefits and minimize your tax concerns. Our team of tax experts is highly trained and up-to-date with the latest tax laws and regulations."
 articleTitle2: "What Does It Involve?"

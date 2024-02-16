@@ -2,6 +2,7 @@
 title: "Mobile Apps"
 group: "Technology"
 image: "/src/assets/imagess/mobile-app.jpg"
+description: "We develop mobile applications tailored to the specific requirements of businesses looking to enhance their internal productivity and interaction with their customers."
 articleTitle1: "Mobile Apps"
 articleText1: "Unleash the potential of your brand in the palm of your users' hands and be part of the mobile revolution with our customized solutions oriented towards success. We develop mobile applications tailored to the specific requirements of companies looking to improve their internal productivity and interaction with their customers."
 articleTitle2: "What Does It Involve?"

@@ -2,6 +2,7 @@
 title: "Impuestos Corporativos"
 group: "Servicios de Impuesto"
 image: "/src/assets/imagess/corporate-tax.jpg"
+description: "Con el servicio de impuestos te ayudamos a maximizar tus beneficios y minimizar tus preocupaciones fiscales. Estaremos disponibles todo el año para ti."
 articleTitle1: "Servicio de Impuestos"
 articleText1: "En PC APPS, entendemos que la preparación de impuestos puede ser un proceso complicado y abrumador. Es por eso que ofrecemos un servicio de TAX Service personalizado y profesional para ayudarte a maximizar tus beneficios y minimizar tus preocupaciones fiscales. Nuestro equipo de expertos en impuestos está altamente capacitado y actualizado con las últimas leyes y regulaciones fiscales."
 articleTitle2: "¿En qué consiste?"

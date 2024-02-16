@@ -6,6 +6,7 @@ const globalSchema = defineCollection({
     title: z.string(),
     group: z.string(),
     image: z.string(),
+    description: z.string(),
     articleTitle1: z.string(),
     articleText1: z.string(),
     articleTitle2: z.string().optional(),

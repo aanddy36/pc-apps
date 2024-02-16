@@ -79,7 +79,7 @@ export const CarouselSection = ({ lang }: { lang: "en" | "es" }) => {
           return (
             <SingleImage
               key={item}
-              path={`/${lang}/our-services/${item}`}
+              path={`${lang === "en" ? "" : "/es"}/our-services/${item}`}
               lang={lang}
               position={(i + 1) as 1 | 2 | 3}
               translation={translation}

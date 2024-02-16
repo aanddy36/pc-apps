@@ -27,6 +27,6 @@ const t = useTranslations(lang);
       <p class="text-justify">
         {t("home.aboutDescrp")}
       </p>
-      <Button path={`/${lang}/about`}>{t("home.aboutBtn")}</Button>
+      <Button path={`${lang === "en" ? "" : "/es"}/about`}>{t("home.aboutBtn")}</Button>
     </div>
   </section>
