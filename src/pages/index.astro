@@ -1,9 +1,20 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="0;url=/en/" />
-    <title>Document</title>
-  </head>
-  <body> </body>
-</html>
+---
+import Layout from "../layouts/Layout.astro";
+import { CarouselSection } from "../components/sections/CarouselSection.tsx";
+import { getLangFromUrl } from "../i18n/utils";
+import HomeServices from "../components/sections/HomeServices.astro";
+import HomeAbout from "../components/sections/HomeAbout.astro";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout
+  title="Home"
+  description={`PC APPS is a company that provides tax filing services in the USA, 
+  web and mobile design, and consulting services in various areas. Discover all the 
+  services we have available!`}
+>
+  <CarouselSection client:load lang={lang} />
+  <HomeServices />
+  <HomeAbout />
+</Layout>

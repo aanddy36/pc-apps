@@ -2,9 +2,10 @@
 import { getLangFromUrl } from "../i18n/utils";
 import { getCollection } from "astro:content";
 
-const theLang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url);
+const serviceNav = lang === "en" ? "" : "/es";
 const allServices = await getCollection("theServices", ({ id }) => {
-  return id.startsWith(theLang + "/");
+  return id.startsWith(lang + "/");
 });
 
 interface Props {
@@ -23,7 +24,7 @@ const { category } = Astro.props;
         .map((service) => {
           return (
             <a
-              href={`/${theLang}/our-services/${service.slug.split("/")[1]}`}
+              href={`${serviceNav}/our-services/${service.slug.split("/")[1]}`}
               class=" transition-all duration-200 hover:px-4 hover:text-blue"
             >
               {service.data.title}

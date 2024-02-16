@@ -6,14 +6,13 @@ import HomeServices from "../../components/sections/HomeServices.astro";
 import HomeAbout from "../../components/sections/HomeAbout.astro";
 
 const lang = getLangFromUrl(Astro.url);
-
-
 ---
 
 <Layout
   title="Inicio"
-  description="Página de inicio, donde puedes conocer los servicios que brindamos y saber quiénes somos"
-  path="es/"
+  description={`PC APPS es una compañia que provee servicios de declaración de impuestos en 
+  USA, diseño web y móvil, y consultorías en diversas áreas. ¡Descubre todos los servicios 
+  que tenemos disponibles!`}
 >
   <CarouselSection client:load lang={lang} />
   <HomeServices />

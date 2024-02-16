@@ -11,11 +11,10 @@ const lang = getLangFromUrl(Astro.url);
 
 <Layout
   title="Quiénes Somos"
-  description="Página de quiénes somos, donde puedes conocer quiénes somos"
-  path="es/"
+  description={`Descubre quiénes somos y por qué somos la mejor opción para tus necesidades`}
 >
   <AboutPresentation />
   <AboutVision />
   <AboutSendEmail />
-  <AboutLocation lang={lang} client:only/>
+  <AboutLocation lang={lang} client:only />
 </Layout>

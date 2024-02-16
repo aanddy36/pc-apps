@@ -10,8 +10,8 @@ const t = useTranslations(lang);
 
 <Layout
   title="Contáctanos"
-  description="¡Ponte en contacto con nosotros para brindarte atención personalizada!"
-  path="en/contact"
+  description={`¡Ponte en contacto con nosotros para brindarte atención personalizada
+   sobre el servicio en el que estes interesado!`}
 >
   <h1
     class="w-full py-5 laptop:py-8 bg-blue text-[26px] laptop:text-3xl
@@ -27,7 +27,7 @@ font-extrabold text-center text-white"
       <p>
         {t("contact.formText")}
       </p>
-      <SmallForm lang={lang} client:only/>
+      <SmallForm lang={lang} client:only />
     </section>
   </main>
 </Layout>

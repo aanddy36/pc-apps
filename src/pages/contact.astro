@@ -1,8 +1,8 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from "../../i18n/utils";
-import { ContactLocation } from "../../components/sections/ContactLocation";
-import { SmallForm } from "../../components/SmallForm";
+import Layout from "../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import { ContactLocation } from "../components/sections/ContactLocation";
+import { SmallForm } from "../components/SmallForm";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -10,8 +10,8 @@ const t = useTranslations(lang);
 
 <Layout
   title="Contact Us"
-  description="Get in contact with us so we can provide you personalized attention!"
-  path="en/contact"
+  description={`¡Get in touch with us for personalized assistance regarding the service
+   you're interested in!`}
 >
   <h1
     class="w-full py-5 laptop:py-8 bg-blue text-[26px] laptop:text-3xl
@@ -27,7 +27,7 @@ const t = useTranslations(lang);
       <p>
         {t("contact.formText")}
       </p>
-      <SmallForm lang={lang} client:only/>
+      <SmallForm lang={lang} client:only />
     </section>
   </main>
 </Layout>

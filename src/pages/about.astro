@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutPresentation from "../components/sections/AboutPresentation.astro";
+import AboutVision from "../components/sections/AboutVision.astro";
+import AboutSendEmail from "../components/sections/AboutSendEmail.astro";
+import { AboutLocation } from "../components/sections/AboutLocation";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<Layout
+  title="Who We Are"
+  description={`Discover who we are and why we're the best choice for your needs`}
+>
+  <AboutPresentation />
+  <AboutVision />
+  <AboutSendEmail />
+  <AboutLocation lang={lang} client:only />
+</Layout>

@@ -10,22 +10,26 @@ import ServiceDropdown from "../components/ServiceDropdown.astro";
 import Footer from "../components/sections/Footer.astro";
 
 const lang = getLangFromUrl(Astro.url);
+let activeLink = "";
+if (lang === "en") {
+  activeLink = Astro.request.url.split("/")[3];
+} else {
+  activeLink = Astro.request.url.split("/")[4];
+}
+
 const allServices = await getCollection("theServices", ({ id }) => {
   return id.startsWith(lang + "/");
 });
 
 const t = useTranslations(lang);
-const activeLink = Astro.request.url.split("/")[4];
 const link = Astro.request.url;
 
 interface Props {
   title: string;
   description: string;
-  path: string;
 }
 
-const { title, description, path } = Astro.props;
-const URL = import.meta.env.PUBLIC_URL;
+const { title, description } = Astro.props;
 ---
 
 <!doctype html>
@@ -40,18 +44,18 @@ const URL = import.meta.env.PUBLIC_URL;
     <meta property="og:title" content={`PC APPS | ${title}`} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={`${URL}/${path}`} />
+    <meta property="og:url" content={Astro.request.url} />
     <meta property="og:image" content="./logo.png" />
     <title>{`PC APPS | ${title}`}</title>
   </head>
   <body class="bg-bg flex flex-col min-h-screen">
     <NewNavbar link={link} allServices={allServices} client:load>
-      <a href={`/${lang}`}>
+      <a href={`${lang === "en" ? "/" : "/es"}`}>
         <Image src={logoPcApps} alt={t("nav.altLogo")} width="140" />
       </a>
       <ul class="hidden laptop:flex gap-7 items-center">
         <a
-          href={`/${lang}`}
+          href={`${lang === "en" ? "/" : "/es"}`}
           class={`transition-all duration-200 hover:text-blue
               hover:border-b-2 hover:border-b-blue border-2 border-transparent 
               ${!activeLink && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
@@ -59,7 +63,7 @@ const URL = import.meta.env.PUBLIC_URL;
           <li>{t("nav.home")}</li>
         </a>
         <a
-          href={`/${lang}/about`}
+          href={`${lang === "en" ? "" : "/es"}/about`}
           class={`transition-all duration-200 hover:text-blue
             hover:border-b-2 hover:border-b-blue border-2 border-transparent 
             ${activeLink === "about" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
@@ -70,7 +74,9 @@ const URL = import.meta.env.PUBLIC_URL;
       </ul>
       <ul class="hidden laptop:flex items-center gap-2">
         <li>
-          <Button path={`/${lang}/contact`}>{t("nav.contactBtn")}</Button>
+          <Button path={`${lang === "en" ? "" : "/es"}/contact`}>
+            {t("nav.contactBtn")}
+          </Button>
         </li>
         <li>
           <Picker />

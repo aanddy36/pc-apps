@@ -2,18 +2,20 @@
 import { getRelativeLocaleUrl } from "astro:i18n";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 
-const lang = Astro.request.url;
+const url = Astro.request.url;
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 
-const extraPaths = lang.split("/").slice(4);
+let extraPaths = [];
+if (lang === "en") {
+  extraPaths = url.split("/").slice(3);
+} else {
+  extraPaths = url.split("/").slice(4);
+}
 
-const theLang = getLangFromUrl(Astro.url);
-const t = useTranslations(theLang);
-
-const currentPath = "/" + lang.split("/").slice(3).join("/");
+const currentPath = "/" + url.split("/").slice(3).join("/");
 const spanishPath = getRelativeLocaleUrl("es", extraPaths.join("/"));
 const englishPath = getRelativeLocaleUrl("en", extraPaths.join("/"));
-/* const spanishPath = '/es' + extraPaths.join("/"); 
-const englishPath = '/en' + extraPaths.join("/");*/
 ---
 
 <select class="cursor-pointer px-4 py-1 bg-bg" id="picker">

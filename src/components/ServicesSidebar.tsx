@@ -6,16 +6,16 @@ export const ServicesSidebar = ({
   isDropdownOpen,
   setIsDropdownOpen,
   path,
-  language,
+  lang,
   allServices,
 }: {
   isDropdownOpen: boolean;
   setIsDropdownOpen: (value: boolean) => void;
   path: string;
-  language: string;
+  lang: "en" | "es";
   allServices: Service[];
 }) => {
-  const t = useTranslations(language as "es" | "en");
+  const t = useTranslations(lang);
   const filteredServices = allServices.map((serv) => serv.data);
   const categories = [...new Set(filteredServices.map((s) => s.group))];
   return (
@@ -54,7 +54,7 @@ export const ServicesSidebar = ({
                     return (
                       <a
                         key={index}
-                        href={`/${language}/our-services/${
+                        href={`${lang === "en" ? "" : "/es"}/our-services/${
                           service.slug.split("/")[1]
                         }`}
                         className=" transition-all duration-200 hover:px-4 hover:text-blue"

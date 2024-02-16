@@ -1,8 +1,8 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../../layouts/Layout.astro";
-import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
-import { SmallForm } from "../../../components/SmallForm";
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { SmallForm } from "../../components/SmallForm";
 import { Image } from "astro:assets";
 import type { ImageMetadata } from "astro";
 
@@ -33,7 +33,6 @@ if (!images[theService.data.image])
 <Layout
   title={theService.data.title}
   description="Home page, where you can find all the services we provide and know who we are"
-  path={theService.slug}
 >
   <h1
     class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
