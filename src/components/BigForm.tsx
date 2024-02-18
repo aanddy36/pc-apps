@@ -28,13 +28,9 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
   };
 
   const sendEmail = async (myForm: any) => {
-    console.log(myForm);
     try {
       setIsLoading(true);
-      await axios.post(
-        `${import.meta.env.PUBLIC_BACKEND_URL}`,
-        myForm
-      );
+      await axios.post(`${import.meta.env.PUBLIC_BACKEND_URL}`, myForm);
       notify(t("email.success"), true);
     } catch (error) {
       console.log(error);

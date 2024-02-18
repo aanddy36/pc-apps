@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Resend } from "resend";
 
 export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -28,12 +29,20 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   };
 
   const sendEmail = async (myForm: any) => {
+    console.log(myForm);
     try {
+      const resend = new Resend("re_eC4VkrrC_8xE7QhVWMvm4DchRBS3om2h2");
       setIsLoading(true);
-      await axios.post(
-        `${import.meta.env.PUBLIC_BACKEND_URL}`,
-        myForm
-      );
+      const { data, error } = await resend.emails.send({
+        from: "Contacto PC APPS <onboarding@resend.dev>",
+        to: "administrador@pcappsint.com",
+        subject: `NUEVO CLIENTE INTERESADO`,
+        html: `<h1>NEW EMAIL</h1>`,
+      });
+      if (error) {
+        console.error({ error });
+        notify(t("email.error"), false);
+      }
       notify(t("email.success"), true);
     } catch (error) {
       console.log(error);
@@ -41,6 +50,15 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
     }
     setIsLoading(false);
     reset();
+    /* try {
+      await axios.post(`${import.meta.env.PUBLIC_BACKEND_URL}`, myForm);
+      notify(t("email.success"), true);
+    } catch (error) {
+      console.log(error);
+      notify(t("email.error"), false);
+    }
+    setIsLoading(false);
+    reset(); */
   };
 
   return (
