@@ -29,7 +29,7 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   };
 
   const sendEmail = async (myForm: any) => {
-    console.log(myForm);
+    /*     console.log(myForm);
     try {
       const resend = new Resend("re_eC4VkrrC_8xE7QhVWMvm4DchRBS3om2h2");
       setIsLoading(true);
@@ -49,8 +49,9 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
       notify(t("email.error"), false);
     }
     setIsLoading(false);
-    reset();
-    /* try {
+    reset(); */
+    try {
+      setIsLoading(true);
       await axios.post(`${import.meta.env.PUBLIC_BACKEND_URL}`, myForm);
       notify(t("email.success"), true);
     } catch (error) {
@@ -58,7 +59,7 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
       notify(t("email.error"), false);
     }
     setIsLoading(false);
-    reset(); */
+    reset();
   };
 
   return (
