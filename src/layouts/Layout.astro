@@ -8,7 +8,7 @@ import logoPcApps from "../assets/logo.png";
 import { getCollection } from "astro:content";
 import ServiceDropdown from "../components/ServiceDropdown.astro";
 import Footer from "../components/sections/Footer.astro";
-import "../index.css"
+import "../index.css";
 
 const lang = getLangFromUrl(Astro.url);
 let activeLink = "";
@@ -46,7 +46,14 @@ const { title, description } = Astro.props;
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={Astro.request.url} />
-    <meta property="og:image" content="https://pcappsint.com/logo.png" />
+    <meta property="og:image" content="https://pcappsint.com/pc-logo.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="pcappsint.com" />
+    <meta property="twitter:url" content="https://pcappsint.com/" />
+    <meta name="twitter:title" content={`PC APPS | ${title}`} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://pcappsint.com/pc-logo.png" />
     <title>{`PC APPS | ${title}`}</title>
   </head>
   <body class="bg-bg flex flex-col min-h-screen">
