@@ -18,7 +18,7 @@ export const ui = {
     "picker.english": "English",
     "footer.allRights": "Copyright ©2024 All rights reserved",
     "footer.description":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development.",
     "footer.contact": "Contact",
     "footer.connect": "Connect",
     "footer.logoAlt": "PC APPS Logo",
@@ -61,7 +61,7 @@ export const ui = {
     "home.aboutTitle": "About Us",
     "home.aboutSubtitle": "Who We Are",
     "home.aboutDescrp":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development. Our proven experience in the market and personalized attention set us apart from the rest. Trust us to drive your success!",
     "home.aboutBtn": "Learn More",
     "home.aboutAlt": "About Us Image",
     "about.presentTitle": "Who We Are?",
@@ -115,7 +115,7 @@ export const ui = {
     "picker.english": "Inglés",
     "footer.allRights": "Copyright ©2024 Todos los derechos reservados",
     "footer.description":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.",
+      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles.",
     "footer.contact": "Contacto",
     "footer.connect": "Redes",
     "footer.logoAlt": "Logo PC APPS",
@@ -159,7 +159,7 @@ export const ui = {
     "home.aboutTitle": "Acerca De Nosotros",
     "home.aboutSubtitle": "Quiénes Somos",
     "home.aboutDescrp":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in.",
+      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles. Nuestra experiencia probada en el mercado y nuestra atención personalizada nos destaca del resto. ¡Confía en nosotros para impulsar tu éxito!",
     "home.aboutBtn": "Ver Más",
     "home.aboutAlt": "Imágen Sobre Nosotros",
     "about.presentTitle": "¿Quiénes Somos?",
