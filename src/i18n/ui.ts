@@ -2,6 +2,7 @@ export const languages = {
   en: "English",
   es: "Spanish",
 };
+
 export const showDefaultLang = false;
 
 export const defaultLang = "en";
@@ -25,15 +26,15 @@ export const ui = {
     "footer.fbAlt": "Facebook Logo",
     "footer.igAlt": "Instagram Logo",
     "footer.ytAlt": "YouTube Logo",
-    "home.imageHeader1": "Do you need help with the preparation of your taxes?",
-    "home.imageSubtext1":
-      "We simplify your life for you! Trust our team specialized in tax preparation for residents in the U.S. and leave your tax worries in good hands",
-    "home.imageBtn1": "See Tax Service",
-    "home.imageHeader2":
-      "Develop your web app and put your brand in the digital world",
+    "home.imageHeader2": "Do you need help with the preparation of your taxes?",
     "home.imageSubtext2":
+      "We simplify your life for you! Trust our team specialized in tax preparation for residents in the U.S. and leave your tax worries in good hands",
+    "home.imageBtn2": "See Mobile Apps",
+    "home.imageHeader1":
+      "Develop your web app and put your brand in the digital world",
+    "home.imageSubtext1":
       "Boost your sales with a tailor-made website. Let our creativity drive your business towards online success. Make your web presence your best investment!",
-    "home.imageBtn2": "See Web Design",
+    "home.imageBtn1": "See Web Design",
     "home.imageHeader3":
       "Make your brand to grow as fast and efectively as possible",
     "home.imageSubtext3":
@@ -42,22 +43,22 @@ export const ui = {
     "home.serviceTitle": "Our Services",
     "home.serviceSubtitle": "Some Of The Services We Provide",
     "home.serviceBtn": "See More",
-    "home.serviceAlt1": "Taxes Icon",
-    "home.serviceTitle1": "Personal Income Tax",
+    "home.serviceAlt1": "Pc Icon",
+    "home.serviceTitle1": "Web Design",
     "home.serviceDescr1":
-      "Maximize your tax refund with our expert tax preparation service for U.S. residents.",
-    "home.serviceAlt2": "Taxes Icon",
-    "home.serviceTitle2": "Corporate Tax",
-    "home.serviceDescr2":
-      "Optimize your company with our expert corporate tax preparation service in the U.S. Maximize profits!",
-    "home.serviceAlt3": "Pc Icon",
-    "home.serviceTitle3": "Web Design",
-    "home.serviceDescr3":
       "Transform your online presence with innovative and creative web pages. Stand out in the digital age.",
-    "home.serviceAlt4": "App Mobile Icon",
-    "home.serviceTitle4": "Mobile Apps",
-    "home.serviceDescr4":
+    "home.serviceAlt2": "App Mobile Icon",
+    "home.serviceTitle2": "Mobile Apps",
+    "home.serviceDescr2":
       "We develop innovative and functional mobile applications that enhance your digital presence.",
+    "home.serviceAlt3": "Digital Marketing Icon",
+    "home.serviceTitle3": "Digital Marketing",
+    "home.serviceDescr3":
+      "Achieve your growth objectives and increase your presence on social networks.",
+    "home.serviceAlt4": "Taxes Icon",
+    "home.serviceTitle4": "Corporate Tax",
+    "home.serviceDescr4":
+      "Optimize your company with our expert corporate tax preparation service in the U.S. Maximize profits!",
     "home.aboutTitle": "About Us",
     "home.aboutSubtitle": "Who We Are",
     "home.aboutDescrp":
@@ -122,16 +123,16 @@ export const ui = {
     "footer.fbAlt": "Logo de Facebook",
     "footer.igAlt": "Logo de Instagram",
     "footer.ytAlt": "Logo de YouTube",
-    "home.imageHeader1":
-      "¿Necesitas ayuda con la preparación de tus impuestos?",
-    "home.imageSubtext1":
-      "¡Nosotros te simplificamos la vida! Confía en nuestro equipo especializado en la preparación de impuestos para residentes en EE. UU. y deja tus preocupaciones fiscales en buenas manos.",
-    "home.imageBtn1": "Ver Servicio de Impuesto",
     "home.imageHeader2":
-      "Desarrolla tu página web y lanza tu marca al mundo digital",
+      "¿Necesitas ayuda con la preparación de tus impuestos?",
     "home.imageSubtext2":
+      "¡Nosotros te simplificamos la vida! Confía en nuestro equipo especializado en la preparación de impuestos para residentes en EE. UU. y deja tus preocupaciones fiscales en buenas manos.",
+    "home.imageBtn2": "Ver Aplicaciones Móviles",
+    "home.imageHeader1":
+      "Desarrolla tu página web y lanza tu marca al mundo digital",
+    "home.imageSubtext1":
       "Potencia tus ventas con una página web diseñada a tu medida. Deja que nuestra creatividad impulsen tu negocio hacia el éxito online. ¡Haz que tu presencia en la web sea tu mejor inversión!",
-    "home.imageBtn2": "Ver Diseño Web",
+    "home.imageBtn1": "Ver Diseño Web",
     "home.imageHeader3":
       "Haz que tu marca crezca lo más rápida y efectivamente posible",
     "home.imageSubtext3":
@@ -140,22 +141,22 @@ export const ui = {
     "home.serviceTitle": "Nuestros Servicios",
     "home.serviceSubtitle": "Algunos De Los Servicios Que Ofrecemos",
     "home.serviceBtn": "Ver Más",
-    "home.serviceAlt1": "Ícono de Impuestos",
-    "home.serviceTitle1": "Impuestos Personales",
+    "home.serviceAlt1": "Ícono de PC",
+    "home.serviceTitle1": "Diseño Web",
     "home.serviceDescr1":
-      "Maximiza tu reembolso fiscal con nuestro servicio experto de preparación de impuestos para residentes en EE. UU.",
-    "home.serviceAlt2": "Ícono de Impuestos",
-    "home.serviceTitle2": "Impuestos Corporativos",
-    "home.serviceDescr2":
-      "Optimiza tu empresa con nuestra experta preparación de impuestos corporativos en EE. UU. ¡Maximiza beneficios!",
-    "home.serviceAlt3": "Ícono de PC",
-    "home.serviceTitle3": "Diseño Web",
-    "home.serviceDescr3":
       "Transforma tu presencia online con páginas web innovadoras y creativas. Destaca en la era digital.",
-    "home.serviceAlt4": "Ícono de App Móvil",
-    "home.serviceTitle4": "Apps Móviles",
-    "home.serviceDescr4":
+    "home.serviceAlt2": "Ícono de App Móvil",
+    "home.serviceTitle2": "Apps Móviles",
+    "home.serviceDescr2":
       "Desarrollamos aplicaciones móviles innovadoras y funcionales que potencian tu presencia digital.",
+    "home.serviceAlt3": "Ícono de Marketing Digital",
+    "home.serviceTitle3": "Marketing Digital",
+    "home.serviceDescr3":
+      "Alcanza tus objetivos de crecimiento y aumenta tu presencia en las redes sociales.",
+    "home.serviceAlt4": "Ícono de Impuestos",
+    "home.serviceTitle4": "Impuestos Corporativos",
+    "home.serviceDescr4":
+      "Optimiza tu empresa con nuestra experta preparación de impuestos corporativos en EE. UU. ¡Maximiza beneficios!",
     "home.aboutTitle": "Acerca De Nosotros",
     "home.aboutSubtitle": "Quiénes Somos",
     "home.aboutDescrp":

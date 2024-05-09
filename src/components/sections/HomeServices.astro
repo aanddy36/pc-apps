@@ -6,10 +6,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
 const servicePaths = [
-  "personal-tax",
-  "corporate-tax",
   "web-design",
   "mobile-app",
+  "personal-tax",
+  /* "corporate-tax", */
 ];
 ---
 <section
@@ -24,11 +24,11 @@ const servicePaths = [
       </h3>
     </div>
     <div
-      class="grid grid-cols-1 tablet:grid-cols-2 laptop:grid-cols-3 full:grid-cols-4 gap-16"
+      class="grid grid-cols-1 laptop:grid-cols-3 full:grid-cols-3 gap-16"
     >
       {
         servicePaths.map((ser, i) => (
-          <MiniService position={(i + 1) as 1 | 2 | 3 | 4} path={ser} />
+          <MiniService position={(i + 1) as 1 | 2 | 3 /* | 4 */} path={ser} />
         ))
       }
     </div>
