@@ -14,12 +14,15 @@ if (lang === "en") {
   activeLink = Astro.request.url.split("/")[4];
 }
 
-const allServices = await getCollection("theServices", ({ id }) => {
+// ESTO ES PARA TRAER LAS CATEGORIAS DE LA CARPETA content
+/* const allServices = await getCollection("theServices", ({ id }) => {
   return id.startsWith(lang + "/");
 });
 
 const filteredServices = allServices.map((serv) => serv.data);
-const categories = [...new Set(filteredServices.map((s) => s.group))];
+const categories = [...new Set(filteredServices.map((s) => s.group))]; */
+
+const categories = ["mobile-app", "web-design", "payment-gateway"];
 ---
 
 <div class="relative">

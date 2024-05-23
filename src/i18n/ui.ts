@@ -19,7 +19,7 @@ export const ui = {
     "picker.english": "English",
     "footer.allRights": "Copyright ©2024 All rights reserved",
     "footer.description":
-      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development.",
+      "We are a private company dedicated to providing technological solutions with a focus on quality and innovation, enabling us to offer services that make a difference in the growth and success of our clients.",
     "footer.contact": "Contact",
     "footer.connect": "Connect",
     "footer.logoAlt": "PC APPS Logo",
@@ -62,7 +62,7 @@ export const ui = {
     "home.aboutTitle": "About Us",
     "home.aboutSubtitle": "Who We Are",
     "home.aboutDescrp":
-      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development. Our proven experience in the market and personalized attention set us apart from the rest. Trust us to drive your success!",
+      "At PC Apps International LLC, we are dedicated to providing technological solutions that not only meet the current needs of our clients but also prepare businesses for the future. Our focus on quality and innovation allows us to offer services that truly make a difference in our clients' growth and success.",
     "home.aboutBtn": "Learn More",
     "home.aboutAlt": "About Us Image",
     "about.presentTitle": "Who We Are?",
@@ -72,10 +72,10 @@ export const ui = {
       "We seek to advise our clients, optimizing their tax situation to achieve financial success through effective strategic planning.",
     "about.visionTitle": "Our Vision",
     "about.visionText":
-      "Becoming the trusted partner for our clients in the field of tax preparation and strategic consulting. We aim to be an innovative and technologically advanced company that provides solutions to our clients to achieve their financial and growth goals.",
+      "Our vision is to be innovators in the technology industry, recognized for our excellence in delivering comprehensive and customized solutions. We aspire to transform the way businesses manage their operations and connect with their customers through the implementation of advanced technologies and effective digital marketing strategies.",
     "about.missionTitle": "Our Mission",
     "about.missionText":
-      "Providing tax preparation services and strategic consulting to individuals and small businesses in the United States. We are committed to delivering comprehensive and personalized solutions that meet the highest standards of quality and professional ethics.",
+      "Our mission at PC Apps International LLC is to provide innovative and productive technological solutions that drive our clients' success. We are committed to offering high-quality technology products and services, helping businesses improve their efficiency and achieve customer satisfaction.",
     "about.contactTitle": "Contact",
     "about.contactSubtitle":
       "Fill out the following form and receive advice from our team of professionals",
@@ -104,6 +104,9 @@ export const ui = {
       "Fill out the following form and receive advice from our team of professionals",
     "email.success": "Email succesfully sent",
     "email.error": "Error sending email",
+    "services.mobileApp":"Mobile Apps",
+    "services.webDesign":"Web Design",
+    "services.paymentGateway":"Payment Gateways",
   },
   es: {
     "nav.home": "Inicio",
@@ -116,7 +119,7 @@ export const ui = {
     "picker.english": "Inglés",
     "footer.allRights": "Copyright ©2024 Todos los derechos reservados",
     "footer.description":
-      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles.",
+      "Somos una empresa privada dedicada a proporcionar soluciones tecnológicas con un enfoque en la calidad y la innovación, permitiéndonos ofrecer servicios que marcan la diferencia en el crecimiento y éxito de nuestros clientes.",
     "footer.contact": "Contacto",
     "footer.connect": "Redes",
     "footer.logoAlt": "Logo PC APPS",
@@ -160,7 +163,7 @@ export const ui = {
     "home.aboutTitle": "Acerca De Nosotros",
     "home.aboutSubtitle": "Quiénes Somos",
     "home.aboutDescrp":
-      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles. Nuestra experiencia probada en el mercado y nuestra atención personalizada nos destaca del resto. ¡Confía en nosotros para impulsar tu éxito!",
+      "En PC Apps International LLC, estamos dedicados a proporcionar soluciones tecnológicas que no solo satisfacen las necesidades actuales de nuestros clientes, sino que también preparan a las empresas para el futuro. Nuestro enfoque en la calidad y la innovación nos permite ofrecer servicios que realmente marcan la diferencia en el crecimiento y éxito de nuestros clientes.",
     "home.aboutBtn": "Ver Más",
     "home.aboutAlt": "Imágen Sobre Nosotros",
     "about.presentTitle": "¿Quiénes Somos?",
@@ -170,10 +173,10 @@ export const ui = {
       "Buscamos asesorar a nuestros clientes, optimizando su situación fiscal para alcanzar el éxito financiero a través de una planificación estartégica efectiva.",
     "about.visionTitle": "Nuestra Visión",
     "about.visionText":
-      "Convertirnos en el socio de confianza para nuestros clientes en el ámbito de la preparación de impuestos y la consultoría estratégica. Buscamos ser una empresa innovadora y tecnológicamente avanzada que brinden soluciones a nuestros clientes para lograr sus metas financieras y de crecimiento.",
+      "Nuestra visión es ser innovadores en la industria tecnológica, reconocidos por nuestra excelencia en la entrega de soluciones integrales y personalizadas. Aspiramos a transformar la manera en que las empresas gestionan sus operaciones y se conectan con sus clientes, mediante la implementación de tecnologías avanzadas y estrategias de marketing digital efectivas.",
     "about.missionTitle": "Nuestra Misión",
     "about.missionText":
-      "Brindar servicios de preparación de impuestos y consultoría estratégica a personas naturales y pe queñas empresas en Estados Unidos. Nos comprometemos a ofrecer soluciones integrales y personalizadas que cumplan con los más altos estándares de calidad y ética profesional.",
+      "Nuestra misión en PC Apps International LLC es proporcionar soluciones tecnológicas innovadoras y productivas que impulsen el éxito de nuestros clientes. Nos comprometemos a ofrecer productos y servicios de alta calidad en tecnología, ayudando a las empresas a mejorar su eficiencia que obtengan satisfacción de sus clientes.",
     "about.contactTitle": "Contacto",
     "about.contactSubtitle":
       "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
@@ -202,5 +205,8 @@ export const ui = {
       "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
     "email.success": "Email enviado exitosamente",
     "email.error": "Error enviando email",
+    "services.mobileApp":"Aplicaciones Móviles",
+    "services.webDesign":"Diseño Web",
+    "services.paymentGateway":"Pasarelas de Pago",
   },
 };

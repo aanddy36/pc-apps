@@ -9,6 +9,7 @@ import { getCollection } from "astro:content";
 import ServiceDropdown from "../components/ServiceDropdown.astro";
 import Footer from "../components/sections/Footer.astro";
 import "../index.css";
+import { WhatsappBtn } from "../components/WhatsappBtn";
 
 const lang = getLangFromUrl(Astro.url);
 let activeLink = "";
@@ -94,6 +95,7 @@ const { title, description } = Astro.props;
     <div class="grow">
       <slot />
     </div>
+    <WhatsappBtn client:load/>
     <Footer />
   </body>
 </html>

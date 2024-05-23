@@ -42,7 +42,7 @@ export const ContactLocation = ({ lang }: { lang: "en" | "es" }) => {
             <img src={phone.src} alt="Location Ping" />{" "}
             {t("about.locationPhone")}:
           </div>
-          <span className="opacity-70">+1 (123) 456-7890</span>
+          <span className="opacity-70">+1 (702) 239-2987</span>
         </li>
         <li className="flex flex-col gap-1 w-full">
           <div className="font-semibold text-lg flex items-center gap-3">

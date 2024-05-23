@@ -1,0 +1,162 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { SmallForm } from "../../components/SmallForm";
+import photo from "../../assets/imagess/mobile-app.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Mobile Apps"
+  description={`We develop mobile applications tailored to the specific requirements of businesses looking to enhance their internal productivity and interaction with their customers.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Mobile Apps
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+    >
+      <div class="w-full flex flex-col gap-6">
+        <h2 class="text-3xl laptop:text-4xl font-bold">Mobile Apps</h2>
+        <p class="text-left">
+          At PC Apps International LLC, we offer mobile app development services
+          designed to enhance <strong>efficiency, engagement,</strong> and <strong
+            >growth</strong
+          > for your business. By choosing our services, you will gain significant
+          added value in several key areas:
+        </p>
+      </div>
+      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+      <h3 class="text-3xl font-semibold pt-6">What Does It Involve?</h3>
+      <ol
+        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+      >
+        <li>
+          <span class="font-semibold text-xl"
+            >Custom and Tailored Development:</span
+          >
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> We create customized
+              mobile applications that perfectly fit the specific needs of your business
+              and user expectations. From conceptualization to launch, we work closely
+              with you to ensure that every feature and design reflects your vision.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Greater user satisfaction,
+              applications that truly solve specific problems, and an optimized user
+              experience.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >UI and UX Design Expertise:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> Our team of designers
+              and developers focuses on creating intuitive interfaces and exceptional
+              user experiences. We design applications that are attractive, easy
+              to use, and highly functional.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Increased user engagement,
+              reduced abandonment rates, and higher customer retention.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Cross-Platform Compatibility and Performance:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> We develop mobile applications
+              that work seamlessly across multiple platforms, including iOS and Android,
+              using native technologies and hybrid frameworks as needed.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Extended reach to a broader
+              audience, optimal performance on all devices, and cost savings in development
+              and maintenance.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Integration with Existing Services and Tools:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> We ensure that your
+              mobile applications integrate smoothly with your current systems and
+              tools, such as CRM, ERP, and marketing platforms, providing a unified
+              and consistent experience.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Improved data flow, automated
+              processes, and increased operational efficiency.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Security and Data Protection:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> We implement the latest
+              security practices to protect your users' data and the integrity of
+              your application. We conduct rigorous testing and security audits to
+              identify and address potential vulnerabilities.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Customer trust and loyalty,
+              compliance with data protection regulations, and reduced risk of security
+              breaches.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Ongoing Support and Maintenance:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Added Value:</span> We offer continuous
+              support and maintenance to ensure your mobile application is always
+              up-to-date, error-free, and running efficiently. We also provide regular
+              updates to incorporate new features and improvements.
+            </li>
+            <li>
+              <span class="font-semibold">Benefits:</span> Long-term peace of mind
+              and reliability, continuous improvements to the application, and quick
+              response to any issues that may arise.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section
+      class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
+      laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
+</Layout>

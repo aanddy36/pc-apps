@@ -1,0 +1,106 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import { SmallForm } from "../../components/SmallForm";
+import photo from "../../assets/imagess/payment-gateway.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Payment Gateway"
+  description={`Our
+    payment gateway configuration service is designed to provide a
+    seamless shopping experience for your customers while maximizing the
+    security and efficiency of your transactions.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Payment Gateway
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+    >
+      <div class="w-full flex flex-col gap-6">
+        <h2 class="text-3xl laptop:text-4xl font-bold">Payment Gateway</h2>
+        <p class="text-left">
+          At PCAPPSINT LLC, we understand that an efficient and secure payment
+          gateway is essential for the success of your online business. Our
+          payment gateway configuration service is designed to provide a
+          seamless <strong>shopping experience for your customers</strong> while
+          maximizing the <strong>security</strong> and <strong
+            >efficiency</strong
+          > of your transactions.
+        </p>
+      </div>
+      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+      <h3 class="text-3xl font-semibold pt-6">
+        What Does It Involve?
+      </h3>
+      <ol
+        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify"
+      >
+        <li>
+          <span class="font-semibold">Customized Integration:</span> We tailor the
+          payment gateway to the specific needs of your business. Whether you need
+          integration with multiple payment methods or advanced functionalities like
+          recurring subscriptions, our experts handle everything.
+        </li>
+        <li>
+          <span class="font-semibold">Superior Security:</span> Protect your customers'
+          data with the most advanced security measures. We implement encryption
+          technologies and comply with standards to ensure that every transaction
+          is safe and reliable.
+        </li>
+        <li>
+          <span class="font-semibold">Optimized User Experience:</span> We provide
+          a frictionless shopping experience for your customers, which can reduce
+          cart abandonment and increase conversions. With an intuitive and fast payment
+          interface, your customers can complete their purchases with ease.
+        </li>
+        <li>
+          <span class="font-semibold">Multichannel Support:</span> Integrate your
+          payment gateway not only on your website but also on mobile apps and other
+          sales channels. This ensures a consistent and convenient payment experience
+          for your customers, no matter how they choose to shop.
+        </li>
+        <li>
+          <span class="font-semibold">Real-Time Monitoring and Analytics:</span>
+          Keep control over your transactions with real-time monitoring and analytics
+          tools. This allows you to make informed decisions and continuously optimize
+          your payment processes to improve efficiency and profitability.
+        </li>
+        <li>
+          <span class="font-semibold">Specialized Technical Support:</span> Our support
+          team is available to assist you at every step of the process, from initial
+          setup to resolving any issues that may arise. We ensure that your payment
+          gateway operates smoothly and is always operational.
+        </li>
+        <li>
+          <span class="font-semibold">Scalability and Flexibility:</span> As your
+          business grows, your payment gateway should grow with you. Our solutions
+          are scalable and flexible, allowing you to add new functionalities and
+          adapt to your business’s changing needs without complications.
+        </li>
+      </ol>
+    </section>
+
+    <section
+      class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
+  laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
+</Layout>

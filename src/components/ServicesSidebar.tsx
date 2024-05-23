@@ -16,8 +16,16 @@ export const ServicesSidebar = ({
   allServices: Service[];
 }) => {
   const t = useTranslations(lang);
-  const filteredServices = allServices.map((serv) => serv.data);
-  const categories = [...new Set(filteredServices.map((s) => s.group))];
+  /*   const filteredServices = allServices.map((serv) => serv.data);
+  const categories = [...new Set(filteredServices.map((s) => s.group))]; */
+  const categories = ["mobile-app", "web-design", "payment-gateway"];
+  const names = {
+    "mobile-app": "mobileApp",
+    "web-design": "webDesign",
+    "payment-gateway": "paymentGateway",
+  };
+  type NamesKey = keyof typeof names;
+
   return (
     <div
       className={`border-b border-[#7e7e7e3d] py-3  px-4 transiton duration-200 overflow-hidden 
@@ -42,28 +50,19 @@ export const ServicesSidebar = ({
         </span>
         <ChevrownDown />
       </button>
-      <ul className="flex flex-col">
+      <ul className="flex flex-col pt-3">
         {categories.map((category) => {
           return (
-            <div key={category} className="flex flex-col gap-2 p-4">
-              <h5 className="font-semibold">{category}</h5>
-              <div className="flex flex-col gap-2 pl-4 w-full">
-                {allServices
-                  .filter((cons) => cons.data.group === category)
-                  .map((service, index) => {
-                    return (
-                      <a
-                        key={index}
-                        href={`${lang === "en" ? "" : "/es"}/our-services/${
-                          service.slug.split("/")[1]
-                        }`}
-                        className=" transition-all duration-200 hover:px-4 hover:text-blue"
-                      >
-                        {service.data.title}
-                      </a>
-                    );
-                  })}
-              </div>
+            <div key={category} className="flex flex-col gap-2 px-4 py-2">
+              {/* <h5 className="font-semibold">{category}</h5> */}
+
+              <a
+                key={category}
+                href={`${lang === "en" ? "" : "/es"}/our-services/${category}`}
+                className=" transition-all duration-200 hover:px-4 hover:text-blue"
+              >
+                {t(`services.${names[category as NamesKey]}` as any)}
+              </a>
             </div>
           );
         })}
