@@ -1,0 +1,166 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { SmallForm } from "../../../components/SmallForm";
+import photo from "../../../assets/imagess/rfid.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Identificación por Radiofrecuencia"
+  description={`Ofrecemos soluciones de Identificación por Radiofrecuencia (RFID) para una gestión de inventarios más precisa y eficiente. Nuestros sistemas RFID permiten el seguimiento en tiempo real de productos, reducción de pérdidas y optimización de procesos logísticos. `}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Identificación por Radiofrecuencia (RFID)
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+    >
+      <div class="w-full flex flex-col gap-6">
+        <h2 class="text-3xl laptop:text-4xl font-bold">RFID</h2>
+        <p class="text-left">
+          En PC Apps International LLC, ofrecemos soluciones de tecnología RFID
+          (Identificación por Radiofrecuencia) diseñadas para <strong
+            >optimizar y transformar la gestión de inventarios y operaciones
+            logísticas de su negocio.</strong
+          > Al contratar nuestros servicios de tecnología RFID, usted obtendrá múltiples
+          valores agregados que beneficiarán significativamente a su empresa.
+        </p>
+      </div>
+      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+      <h3 class="text-3xl font-semibold pt-6">¿En Qué Consiste?</h3>
+      <ol
+        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+      >
+        <li>
+          <span class="font-semibold text-xl"
+            >Implementación Personalizada y Asesoramiento:</span
+          >
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Nuestros expertos
+              trabajan en estrecha colaboración con su equipo para diseñar e implementar
+              un sistema RFID que se adapte perfectamente a las necesidades específicas
+              de su negocio. Ofrecemos asesoramiento continuo y soporte técnico para
+              asegurar una integración fluida.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Maximiza la eficiencia
+              del sistema RFID, garantiza una transición sin problemas y minimiza
+              las interrupciones en las operaciones diarias.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Precisión y Visibilidad en Tiempo Real:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Los sistemas RFID
+              proporcionan datos precisos y en tiempo real sobre la ubicación y el
+              estado de los productos en su inventario. Esto elimina los errores
+              humanos y mejora la exactitud de los datos.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mejora de la visibilidad
+              de inventarios, reducción de pérdidas y desajustes, y una mejor toma
+              de decisiones basada en datos precisos.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Automatización de Procesos y Reducción de Costos:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Con la tecnología
+              RFID, muchos procesos manuales pueden ser automatizados, lo que reduce
+              significativamente el tiempo y el esfuerzo necesarios para gestionar
+              inventarios.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Ahorro en costos operativos,
+              aumento de la productividad del personal y liberación de recursos para
+              tareas más estratégicas.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Seguridad y Control Mejorados:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> La tecnología RFID
+              permite un seguimiento exhaustivo y seguro de los productos, desde
+              el momento de la producción hasta el punto de venta. Esto mejora la
+              seguridad de los activos y reduce el riesgo de robo o pérdida.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mayor control sobre
+              el inventario, reducción de pérdidas y protección de activos valiosos.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Escalabilidad y Adaptabilidad:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Nuestros sistemas
+              RFID están diseñados para crecer con su negocio. Son altamente escalables
+              y pueden adaptarse fácilmente a cambios en la demanda o expansiones
+              de la empresa.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Flexibilidad para adaptarse
+              a las necesidades futuras, asegurando una inversión a largo plazo que
+              sigue proporcionando valor a medida que su negocio crece.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Integración con Sistemas Existentes:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Ofrecemos soluciones
+              que se integran perfectamente con sus sistemas de gestión de inventarios
+              y ERP (Enterprise Resource Planning) existentes, asegurando una interoperabilidad
+              sin fisuras.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mejora de la eficiencia
+              operativa, consolidación de datos en un sistema unificado y reducción
+              de la redundancia de información.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section
+      class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
+      laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
+</Layout>

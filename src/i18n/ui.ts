@@ -26,20 +26,19 @@ export const ui = {
     "footer.fbAlt": "Facebook Logo",
     "footer.igAlt": "Instagram Logo",
     "footer.ytAlt": "YouTube Logo",
-    "home.imageHeader2": "Do you need help with the preparation of your taxes?",
+    "home.imageHeader2": "Transform your app ideas",
     "home.imageSubtext2":
-      "We simplify your life for you! Trust our team specialized in tax preparation for residents in the U.S. and leave your tax worries in good hands",
+      "We build user-friendly mobile apps that meet your needs. Let's turn your concept into reality!",
     "home.imageBtn2": "See Mobile Apps",
     "home.imageHeader1":
-      "Develop your web app and put your brand in the digital world",
+      "Build your online presence",
     "home.imageSubtext1":
-      "Boost your sales with a tailor-made website. Let our creativity drive your business towards online success. Make your web presence your best investment!",
+      "We create websites that help your business stand out and beyond. Let's get started today!",
     "home.imageBtn1": "See Web Design",
-    "home.imageHeader3":
-      "Make your brand to grow as fast and efectively as possible",
+    "home.imageHeader3": "Simplify your online payments",
     "home.imageSubtext3":
-      "In PC APPS we will apply a variety of strategies to increase your business visibility and to attract the target public",
-    "home.imageBtn3": "See Digital Marketing",
+      "Make transactions easy for your customers. Our solution is secure and reliable",
+    "home.imageBtn3": "See Payment Gateway",
     "home.serviceTitle": "Our Services",
     "home.serviceSubtitle": "Some Of The Services We Provide",
     "home.serviceBtn": "See More",
@@ -51,10 +50,10 @@ export const ui = {
     "home.serviceTitle2": "Mobile Apps",
     "home.serviceDescr2":
       "We develop innovative and functional mobile applications that enhance your digital presence.",
-    "home.serviceAlt3": "Digital Marketing Icon",
-    "home.serviceTitle3": "Digital Marketing",
+    "home.serviceAlt3": "Payment Gateway Icon",
+    "home.serviceTitle3": "Payment Gateway",
     "home.serviceDescr3":
-      "Achieve your growth objectives and increase your presence on social networks.",
+      "Experience a seamless way to handle transactions with our secure and efficient payment gateway.",
     "home.serviceAlt4": "Taxes Icon",
     "home.serviceTitle4": "Corporate Tax",
     "home.serviceDescr4":
@@ -69,7 +68,7 @@ export const ui = {
     "about.presentSubtitle":
       "We're on a mission of helping people all around the world",
     "about.presentText":
-      "We seek to advise our clients, optimizing their tax situation to achieve financial success through effective strategic planning.",
+      "We seek to guide our clients in optimizing their digital presence, achieving business success through innovative technological solutions.",
     "about.visionTitle": "Our Vision",
     "about.visionText":
       "Our vision is to be innovators in the technology industry, recognized for our excellence in delivering comprehensive and customized solutions. We aspire to transform the way businesses manage their operations and connect with their customers through the implementation of advanced technologies and effective digital marketing strategies.",
@@ -128,20 +127,19 @@ export const ui = {
     "footer.igAlt": "Logo de Instagram",
     "footer.ytAlt": "Logo de YouTube",
     "home.imageHeader2":
-      "¿Necesitas ayuda con la preparación de tus impuestos?",
+      "Transforma tus ideas en aplicaciones",
     "home.imageSubtext2":
-      "¡Nosotros te simplificamos la vida! Confía en nuestro equipo especializado en la preparación de impuestos para residentes en EE. UU. y deja tus preocupaciones fiscales en buenas manos.",
+      "Creamos aplicaciones móviles fáciles de usar que se adaptan a sus necesidades. ¡Convirtamos su concepto en realidad!",
     "home.imageBtn2": "Ver Aplicaciones Móviles",
     "home.imageHeader1":
-      "Desarrolla tu página web y lanza tu marca al mundo digital",
+      "Construya su presencia en línea",
     "home.imageSubtext1":
-      "Potencia tus ventas con una página web diseñada a tu medida. Deja que nuestra creatividad impulsen tu negocio hacia el éxito online. ¡Haz que tu presencia en la web sea tu mejor inversión!",
+      "Creamos sitios web que ayudan a su negocio a destacarse y más allá. ¡Comencemos hoy mismo!",
     "home.imageBtn1": "Ver Diseño Web",
-    "home.imageHeader3":
-      "Haz que tu marca crezca lo más rápida y efectivamente posible",
+    "home.imageHeader3": "Simplifica tus pagos en línea",
     "home.imageSubtext3":
-      "En PC APPS implementaremos una serie de estrategias para aumentar la visibilidad de tu negocio y atraer al público objetivo",
-    "home.imageBtn3": "Ver Marketing Digital",
+      "Haga que las transacciones sean fáciles para sus clientes. Nuestra solución es segura y confiable",
+    "home.imageBtn3": "Ver Pasarelas de Pago",
     "home.serviceTitle": "Nuestros Servicios",
     "home.serviceSubtitle": "Algunos De Los Servicios Que Ofrecemos",
     "home.serviceBtn": "Ver Más",
@@ -153,10 +151,10 @@ export const ui = {
     "home.serviceTitle2": "Apps Móviles",
     "home.serviceDescr2":
       "Desarrollamos aplicaciones móviles innovadoras y funcionales que potencian tu presencia digital.",
-    "home.serviceAlt3": "Ícono de Marketing Digital",
-    "home.serviceTitle3": "Marketing Digital",
+    "home.serviceAlt3": "Ícono de Pasarelas de Pago",
+    "home.serviceTitle3": "Pasarelas de Pago",
     "home.serviceDescr3":
-      "Alcanza tus objetivos de crecimiento y aumenta tu presencia en las redes sociales.",
+      "Experimente una manera fluida de manejar transacciones con nuestra pasarela de pago segura y eficiente.",
     "home.serviceAlt4": "Ícono de Impuestos",
     "home.serviceTitle4": "Impuestos Corporativos",
     "home.serviceDescr4":
@@ -171,7 +169,7 @@ export const ui = {
     "about.presentSubtitle":
       "Estamos en una misión de ayudar personas por todo el mundo",
     "about.presentText":
-      "Buscamos asesorar a nuestros clientes, optimizando su situación fiscal para alcanzar el éxito financiero a través de una planificación estartégica efectiva.",
+      "Buscamos guiar a nuestros clientes en la optimización de su presencia digital, logrando el éxito empresarial a través de soluciones tecnológicas innovadoras.",
     "about.visionTitle": "Nuestra Visión",
     "about.visionText":
       "Nuestra visión es ser innovadores en la industria tecnológica, reconocidos por nuestra excelencia en la entrega de soluciones integrales y personalizadas. Aspiramos a transformar la manera en que las empresas gestionan sus operaciones y se conectan con sus clientes, mediante la implementación de tecnologías avanzadas y estrategias de marketing digital efectivas.",
