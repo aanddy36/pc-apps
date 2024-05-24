@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import Button from "../components/Button.astro";
 import imagen from "../assets/404-img.png";
-import Image from "astro/components/Image.astro";
+import { Image } from "astro:assets";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

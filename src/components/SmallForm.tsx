@@ -4,7 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Resend } from "resend";
 
 export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   const [isLoading, setIsLoading] = useState(false);

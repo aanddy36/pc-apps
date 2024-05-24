@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { getLangReact, useTranslations } from "../i18n/utils";
 import type { Dropdown, Service } from "../modals";
 import "../index.css";
@@ -19,7 +19,7 @@ export const Sidebar = ({
   link: string;
   allServices: Service[];
 }) => {
-  const language = link.split("/")[3];
+  /* const language = link.split("/")[3]; */
 
   const lang = getLangReact(link);
   const t = useTranslations(lang as "es" | "en");
