@@ -1,12 +1,17 @@
 import whatsapp from "../assets/whatsapp.png";
 
-export const WhatsappBtn = () => {
-  const handleClick = () => {
-    console.log("Whatsapp");
+export const WhatsappBtn = ({ lang }: { lang: "en" | "es" }) => {
+  const messages = {
+    es: "Hola!%20Estoy%20interesado%20en%20uno%20de%20sus%20servicios.%20¿Podemos%20hablar%20al%20respecto?",
+    en: "Hello!%20I'm%20interested%20in%20your%20services.%20Can%20we%20discuss%20further?",
   };
   return (
-    <a target="_blank" href="https://wa.me/573002781618?text=I'm%20interested%20in%20your%20car%20for%20sale "
-     className=" fixed bottom-12 right-12 z-50">
+    <a
+      target="_blank"
+      rel="noopener noreferrer"
+      href={`https://wa.me/573002781618?text=${messages[lang]}`}
+      className=" fixed bottom-12 right-12 z-50"
+    >
       <img
         src={whatsapp.src}
         alt="WhatsApp Logo"

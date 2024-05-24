@@ -95,7 +95,7 @@ const { title, description } = Astro.props;
     <div class="grow">
       <slot />
     </div>
-    <WhatsappBtn client:load />
+    <WhatsappBtn lang={lang} client:load />
     <Footer />
   </body>
 </html>
