@@ -7,7 +7,7 @@ export const CarouselSection = ({ lang }: { lang: "en" | "es" }) => {
   const [translation, setTranslation] = useState(0);
   const [isOver, setIsOver] = useState(false);
   const imagCount = ["first", "second", "third"];
-  const hrefs = ["personal-tax", "web-design", "digital-marketing"];
+  const hrefs = ["mobile-apps", "web-design", "payment-gateway"];
 
   useEffect(() => {
     let myInterval: any;

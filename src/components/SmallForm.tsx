@@ -4,7 +4,6 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { Resend } from "resend";
 
 export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
   const [isLoading, setIsLoading] = useState(false);
@@ -51,15 +50,15 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
     setIsLoading(false);
     reset(); */
     try {
-      setIsLoading(true);
+      setIsLoading(true);     
       await axios.post(`${import.meta.env.PUBLIC_BACKEND_URL}`, myForm);
       notify(t("email.success"), true);
+      reset();
     } catch (error) {
       console.log(error);
       notify(t("email.error"), false);
     }
     setIsLoading(false);
-    reset();
   };
 
   return (
@@ -79,6 +78,10 @@ export const SmallForm = ({ lang }: { lang: "en" | "es" }) => {
           placeholder:font-semibold w-full rounded-xl"
           {...register("name", {
             required: t("about.formErrorName"),
+            maxLength: {
+              value: 50,
+              message: t("about.formErrorName2"),
+            },
           })}
         />
         {errors.name?.message && (

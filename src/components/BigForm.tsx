@@ -32,12 +32,12 @@ export const BigForm = ({ lang }: { lang: "en" | "es" }) => {
       setIsLoading(true);
       await axios.post(`${import.meta.env.PUBLIC_BACKEND_URL}`, myForm);
       notify(t("email.success"), true);
+      reset();
     } catch (error) {
       console.log(error);
       notify(t("email.error"), false);
     }
     setIsLoading(false);
-    reset();
   };
 
   return (

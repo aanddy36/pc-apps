@@ -1,6 +1,5 @@
 ---
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { getCollection } from "astro:content";
 
 const lang = getLangFromUrl(Astro.url);
 const serviceNav = lang === "en" ? "" : "/es";
@@ -16,9 +15,7 @@ interface Props {
 const { category } = Astro.props;
 
 const names = {
-  "mobile-app": "mobileApp",
-  "web-design": "webDesign",
-  "payment-gateway": "paymentGateway",
+  rfid: "rfid",
 };
 
 type NamesKey = keyof typeof names;
@@ -31,10 +28,10 @@ type NamesKey = keyof typeof names;
     {
       (
         <a
-          href={`${serviceNav}/our-services/${category}`}
+          href={`${serviceNav}/products/${category}`}
           class=" transition-all duration-200 hover:px-4 hover:text-blue"
         >
-          {t(`services.${names[category as NamesKey]}` as any)}
+          {t(`products.${names[category as NamesKey]}` as any)}
         </a>
       )
     }

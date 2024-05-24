@@ -5,3 +5,8 @@ export interface Service {
   collection: string;
   data: { title: string; group: string };
 }
+
+export interface Dropdown {
+  services: boolean;
+  products: boolean;
+}

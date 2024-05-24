@@ -2,8 +2,7 @@
 import chevron from "../assets/down-arrow.png";
 import { Image } from "astro:assets";
 import { getLangFromUrl, useTranslations } from "../i18n/utils";
-import { getCollection } from "astro:content";
-import CatDropdown from "../components/CatDropdown.astro";
+import ProductOptions from "./ProductOptions.astro";
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -14,45 +13,37 @@ if (lang === "en") {
   activeLink = Astro.request.url.split("/")[4];
 }
 
-// ESTO ES PARA TRAER LAS CATEGORIAS DE LA CARPETA content
-/* const allServices = await getCollection("theServices", ({ id }) => {
-  return id.startsWith(lang + "/");
-});
-
-const filteredServices = allServices.map((serv) => serv.data);
-const categories = [...new Set(filteredServices.map((s) => s.group))]; */
-
-const categories = ["mobile-app", "web-design", "payment-gateway"];
+const categories = ["rfid"];
 ---
 
 <div class="relative">
   <div
-    id="service"
+    id="product"
     class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[10]
     hover:border-b-2 hover:border-b-blue border-2 border-transparent cursor-pointer
-    ${activeLink === "our-services" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
+    ${activeLink === "products" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
   >
-    <li>{t("nav.services")}</li>
+    <li>{t("nav.products")}</li>
     <Image src={chevron} alt="Arrow" />
   </div>
   <div
     class="absolute left-[-15px] top-[-15px] pt-14 hidden z-[5]"
-    id="dropdown-menu"
+    id="ser-dropdown-menu"
   >
     <ul
       class="w-[300px] flex flex-col shadow-md shadow-black/30 rounded-lg bg-bg"
     >
       {
         categories.map((cat) => {
-          return <CatDropdown category={cat} />;
+          return <ProductOptions category={cat} />;
         })
       }
     </ul>
   </div>
 </div>
 <script type="module">
-  const selector = document.getElementById("service");
-  const dropdown = document.getElementById("dropdown-menu");
+  const selector = document.getElementById("product");
+  const dropdown = document.getElementById("ser-dropdown-menu");
   selector.addEventListener("mouseenter", () => {
     dropdown.style.display = "block";
   });

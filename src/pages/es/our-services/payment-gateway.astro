@@ -1,0 +1,108 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { SmallForm } from "../../../components/SmallForm";
+import photo from "../../../assets/imagess/payment-gateway.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Pasarelas de Pago"
+  description={`Nuestro servicio de configuración de pasarelas de pago está diseñado para proporcionar una experiencia de compra fluida para tus clientes, al tiempo que maximiza la seguridad y eficiencia de tus transacciones.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Pasarelas de Pago
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+    >
+      <div class="w-full flex flex-col gap-6">
+        <h2 class="text-3xl laptop:text-4xl font-bold">Pasarelas de Pago</h2>
+        <p class="text-left">
+          En PCAPPSINT LLC, entendemos que una pasarela de pagos eficiente y
+          segura es esencial para el éxito de tu negocio en línea. Nuestro
+          servicio de configuración de pasarelas de pago está diseñado para
+          proporcionar una <strong
+            >experiencia de compra fluida para tus clientes</strong
+          >, al tiempo que maximiza la <strong>seguridad</strong> y <strong
+            >eficiencia</strong
+          > de tus transacciones.
+        </p>
+      </div>
+      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+      <h3 class="text-3xl font-semibold pt-6">
+        ¿En Qué Consiste?
+      </h3>
+      <ol
+        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify"
+      >
+        <li>
+          <span class="font-semibold">Integración Personalizada:</span> Adaptamos
+          la pasarela de pagos a las necesidades específicas de tu negocio. Ya sea
+          que necesites una integración con múltiples métodos de pago o funcionalidades
+          avanzadas como suscripciones recurrentes, nuestros expertos se encargan
+          de todo.
+        </li>
+        <li>
+          <span class="font-semibold">Seguridad de Nivel Superior:</span> Protege
+          los datos de tus clientes con las medidas de seguridad más avanzadas. Implementamos
+          tecnologías de encriptación y cumplimos con los estándares para garantizar
+          que cada transacción sea segura y confiable.
+        </li>
+        <li>
+          <span class="font-semibold">Experiencia de Usuario Optimizada:</span> Ofrecemos
+          una experiencia de compra sin fricciones para tus clientes, lo que puede
+          reducir el abandono del carrito y aumentar las conversiones. Con una interfaz
+          de pago intuitiva y rápida, tus clientes podrán completar sus compras con
+          facilidad.
+        </li>
+        <li>
+          <span class="font-semibold">Soporte Multicanal:</span> Integra tu pasarela
+          de pagos no solo en tu sitio web, sino también en aplicaciones móviles
+          y otros canales de venta. Esto asegura una experiencia de pago consistente
+          y conveniente para tus clientes, sin importar cómo elijan comprar.
+        </li>
+        <li>
+          <span class="font-semibold">Monitoreo y Análisis en Tiempo Real:</span
+          > Mantén el control sobre tus transacciones con herramientas de monitoreo
+          y análisis en tiempo real. Esto te permite tomar decisiones informadas
+          y optimizar continuamente tus procesos de pago para mejorar la eficiencia
+          y la rentabilidad.
+        </li>
+        <li>
+          <span class="font-semibold">Asistencia Técnica Especializada:</span> Nuestro
+          equipo de soporte está disponible para ayudarte en cada paso del proceso,
+          desde la configuración inicial hasta la resolución de cualquier problema
+          que pueda surgir. Nos aseguramos de que tu pasarela de pagos funcione sin
+          problemas y esté siempre operativa.
+        </li>
+        <li>
+          <span class="font-semibold">Escalabilidad y Flexibilidad:</span> A medida
+          que tu negocio crece, tu pasarela de pagos debe crecer contigo. Nuestras
+          soluciones son escalables y flexibles, permitiéndote agregar nuevas funcionalidades
+          y adaptarte a las necesidades cambiantes de tu negocio sin complicaciones.
+        </li>
+      </ol>
+    </section>
+
+    <section
+      class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
+      laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
+</Layout>

@@ -2,6 +2,7 @@ export const languages = {
   en: "English",
   es: "Spanish",
 };
+
 export const showDefaultLang = false;
 
 export const defaultLang = "en";
@@ -11,6 +12,7 @@ export const ui = {
     "nav.home": "Home",
     "nav.whoweare": "Who We Are",
     "nav.services": "Services",
+    "nav.products": "Products",
     "nav.contactBtn": "Contact Us",
     "nav.altLogo": "PC APPS logo",
     "nav.toggleBar": "Open sidebar",
@@ -18,63 +20,61 @@ export const ui = {
     "picker.english": "English",
     "footer.allRights": "Copyright ©2024 All rights reserved",
     "footer.description":
-      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development.",
+      "We are a private company dedicated to providing technological solutions with a focus on quality and innovation, enabling us to offer services that make a difference in the growth and success of our clients.",
     "footer.contact": "Contact",
     "footer.connect": "Connect",
     "footer.logoAlt": "PC APPS Logo",
     "footer.fbAlt": "Facebook Logo",
     "footer.igAlt": "Instagram Logo",
     "footer.ytAlt": "YouTube Logo",
-    "home.imageHeader1": "Do you need help with the preparation of your taxes?",
-    "home.imageSubtext1":
-      "We simplify your life for you! Trust our team specialized in tax preparation for residents in the U.S. and leave your tax worries in good hands",
-    "home.imageBtn1": "See Tax Service",
-    "home.imageHeader2":
-      "Develop your web app and put your brand in the digital world",
+    "home.imageHeader2": "Transform your app ideas",
     "home.imageSubtext2":
-      "Boost your sales with a tailor-made website. Let our creativity drive your business towards online success. Make your web presence your best investment!",
-    "home.imageBtn2": "See Web Design",
-    "home.imageHeader3":
-      "Make your brand to grow as fast and efectively as possible",
+      "We build user-friendly mobile apps that meet your needs. Let's turn your concept into reality!",
+    "home.imageBtn2": "See Mobile Apps",
+    "home.imageHeader1": "Build your online presence",
+    "home.imageSubtext1":
+      "We create websites that help your business stand out and beyond. Let's get started today!",
+    "home.imageBtn1": "See Web Design",
+    "home.imageHeader3": "Simplify your online payments",
     "home.imageSubtext3":
-      "In PC APPS we will apply a variety of strategies to increase your business visibility and to attract the target public",
-    "home.imageBtn3": "See Digital Marketing",
+      "Make transactions easy for your customers. Our solution is secure and reliable",
+    "home.imageBtn3": "See Payment Gateway",
     "home.serviceTitle": "Our Services",
     "home.serviceSubtitle": "Some Of The Services We Provide",
     "home.serviceBtn": "See More",
-    "home.serviceAlt1": "Taxes Icon",
-    "home.serviceTitle1": "Personal Income Tax",
+    "home.serviceAlt1": "Pc Icon",
+    "home.serviceTitle1": "Web Design",
     "home.serviceDescr1":
-      "Maximize your tax refund with our expert tax preparation service for U.S. residents.",
-    "home.serviceAlt2": "Taxes Icon",
-    "home.serviceTitle2": "Corporate Tax",
-    "home.serviceDescr2":
-      "Optimize your company with our expert corporate tax preparation service in the U.S. Maximize profits!",
-    "home.serviceAlt3": "Pc Icon",
-    "home.serviceTitle3": "Web Design",
-    "home.serviceDescr3":
       "Transform your online presence with innovative and creative web pages. Stand out in the digital age.",
-    "home.serviceAlt4": "App Mobile Icon",
-    "home.serviceTitle4": "Mobile Apps",
-    "home.serviceDescr4":
+    "home.serviceAlt2": "App Mobile Icon",
+    "home.serviceTitle2": "Mobile Apps",
+    "home.serviceDescr2":
       "We develop innovative and functional mobile applications that enhance your digital presence.",
+    "home.serviceAlt3": "Payment Gateway Icon",
+    "home.serviceTitle3": "Payment Gateway",
+    "home.serviceDescr3":
+      "Experience a seamless way to handle transactions with our secure and efficient payment gateway.",
+    "home.serviceAlt4": "Taxes Icon",
+    "home.serviceTitle4": "Corporate Tax",
+    "home.serviceDescr4":
+      "Optimize your company with our expert corporate tax preparation service in the U.S. Maximize profits!",
     "home.aboutTitle": "About Us",
     "home.aboutSubtitle": "Who We Are",
     "home.aboutDescrp":
-      "We are a private company dedicated to consulting, guidance, and advising on tax liquidation in the USA for individuals and corporations. Additionally, we provide services in digital marketing, web development, and mobile application development. Our proven experience in the market and personalized attention set us apart from the rest. Trust us to drive your success!",
+      "At PC Apps International LLC, we are dedicated to providing technological solutions that not only meet the current needs of our clients but also prepare businesses for the future. Our focus on quality and innovation allows us to offer services that truly make a difference in our clients' growth and success.",
     "home.aboutBtn": "Learn More",
     "home.aboutAlt": "About Us Image",
     "about.presentTitle": "Who We Are?",
     "about.presentSubtitle":
       "We're on a mission of helping people all around the world",
     "about.presentText":
-      "We seek to advise our clients, optimizing their tax situation to achieve financial success through effective strategic planning.",
+      "We seek to guide our clients in optimizing their digital presence, achieving business success through innovative technological solutions.",
     "about.visionTitle": "Our Vision",
     "about.visionText":
-      "Becoming the trusted partner for our clients in the field of tax preparation and strategic consulting. We aim to be an innovative and technologically advanced company that provides solutions to our clients to achieve their financial and growth goals.",
+      "Our vision is to be innovators in the technology industry, recognized for our excellence in delivering comprehensive and customized solutions. We aspire to transform the way businesses manage their operations and connect with their customers through the implementation of advanced technologies and effective digital marketing strategies.",
     "about.missionTitle": "Our Mission",
     "about.missionText":
-      "Providing tax preparation services and strategic consulting to individuals and small businesses in the United States. We are committed to delivering comprehensive and personalized solutions that meet the highest standards of quality and professional ethics.",
+      "Our mission at PC Apps International LLC is to provide innovative and productive technological solutions that drive our clients' success. We are committed to offering high-quality technology products and services, helping businesses improve their efficiency and achieve customer satisfaction.",
     "about.contactTitle": "Contact",
     "about.contactSubtitle":
       "Fill out the following form and receive advice from our team of professionals",
@@ -88,6 +88,7 @@ export const ui = {
     "about.formMessagePlaceholder": "Insert your message",
     "about.formBtn": "Send Message",
     "about.formErrorName": "Please insert your name",
+    "about.formErrorName2": "The name must have less than 50 characters",
     "about.formErrorEmail": "Please insert your email",
     "about.formErrorEmail2": "Invalid email format",
     "about.formErrorPhone": "Please insert your phone",
@@ -103,11 +104,20 @@ export const ui = {
       "Fill out the following form and receive advice from our team of professionals",
     "email.success": "Email succesfully sent",
     "email.error": "Error sending email",
+    "services.mobileApp": "Mobile Apps",
+    "services.webDesign": "Web Design",
+    "services.paymentGateway": "Payment Gateways",
+    "products.rfid": "RFID",
+    "error.404": "404 ERROR",
+    "error.text": "We can't seem to find the page you're looking for",
+    "error.btn": "Go Home",
+    "error.oops":"Oops!"
   },
   es: {
     "nav.home": "Inicio",
     "nav.whoweare": "Quiénes Somos",
     "nav.services": "Servicios",
+    "nav.products": "Productos",
     "nav.contactBtn": "Contáctanos",
     "nav.altLogo": "Logo de PC APPS",
     "nav.toggleBar": "Abrir menú lateral",
@@ -115,64 +125,61 @@ export const ui = {
     "picker.english": "Inglés",
     "footer.allRights": "Copyright ©2024 Todos los derechos reservados",
     "footer.description":
-      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles.",
+      "Somos una empresa privada dedicada a proporcionar soluciones tecnológicas con un enfoque en la calidad y la innovación, permitiéndonos ofrecer servicios que marcan la diferencia en el crecimiento y éxito de nuestros clientes.",
     "footer.contact": "Contacto",
     "footer.connect": "Redes",
     "footer.logoAlt": "Logo PC APPS",
     "footer.fbAlt": "Logo de Facebook",
     "footer.igAlt": "Logo de Instagram",
     "footer.ytAlt": "Logo de YouTube",
-    "home.imageHeader1":
-      "¿Necesitas ayuda con la preparación de tus impuestos?",
-    "home.imageSubtext1":
-      "¡Nosotros te simplificamos la vida! Confía en nuestro equipo especializado en la preparación de impuestos para residentes en EE. UU. y deja tus preocupaciones fiscales en buenas manos.",
-    "home.imageBtn1": "Ver Servicio de Impuesto",
-    "home.imageHeader2":
-      "Desarrolla tu página web y lanza tu marca al mundo digital",
+    "home.imageHeader2": "Transforma tus ideas en aplicaciones",
     "home.imageSubtext2":
-      "Potencia tus ventas con una página web diseñada a tu medida. Deja que nuestra creatividad impulsen tu negocio hacia el éxito online. ¡Haz que tu presencia en la web sea tu mejor inversión!",
-    "home.imageBtn2": "Ver Diseño Web",
-    "home.imageHeader3":
-      "Haz que tu marca crezca lo más rápida y efectivamente posible",
+      "Creamos aplicaciones móviles fáciles de usar que se adaptan a sus necesidades. ¡Convirtamos su concepto en realidad!",
+    "home.imageBtn2": "Ver Aplicaciones Móviles",
+    "home.imageHeader1": "Construya su presencia en línea",
+    "home.imageSubtext1":
+      "Creamos sitios web que ayudan a su negocio a destacarse y más allá. ¡Comencemos hoy mismo!",
+    "home.imageBtn1": "Ver Diseño Web",
+    "home.imageHeader3": "Simplifica tus pagos en línea",
     "home.imageSubtext3":
-      "En PC APPS implementaremos una serie de estrategias para aumentar la visibilidad de tu negocio y atraer al público objetivo",
-    "home.imageBtn3": "Ver Marketing Digital",
+      "Haga que las transacciones sean fáciles para sus clientes. Nuestra solución es segura y confiable",
+    "home.imageBtn3": "Ver Pasarelas de Pago",
     "home.serviceTitle": "Nuestros Servicios",
     "home.serviceSubtitle": "Algunos De Los Servicios Que Ofrecemos",
     "home.serviceBtn": "Ver Más",
-    "home.serviceAlt1": "Ícono de Impuestos",
-    "home.serviceTitle1": "Impuestos Personales",
+    "home.serviceAlt1": "Ícono de PC",
+    "home.serviceTitle1": "Diseño Web",
     "home.serviceDescr1":
-      "Maximiza tu reembolso fiscal con nuestro servicio experto de preparación de impuestos para residentes en EE. UU.",
-    "home.serviceAlt2": "Ícono de Impuestos",
-    "home.serviceTitle2": "Impuestos Corporativos",
-    "home.serviceDescr2":
-      "Optimiza tu empresa con nuestra experta preparación de impuestos corporativos en EE. UU. ¡Maximiza beneficios!",
-    "home.serviceAlt3": "Ícono de PC",
-    "home.serviceTitle3": "Diseño Web",
-    "home.serviceDescr3":
       "Transforma tu presencia online con páginas web innovadoras y creativas. Destaca en la era digital.",
-    "home.serviceAlt4": "Ícono de App Móvil",
-    "home.serviceTitle4": "Apps Móviles",
-    "home.serviceDescr4":
+    "home.serviceAlt2": "Ícono de App Móvil",
+    "home.serviceTitle2": "Apps Móviles",
+    "home.serviceDescr2":
       "Desarrollamos aplicaciones móviles innovadoras y funcionales que potencian tu presencia digital.",
+    "home.serviceAlt3": "Ícono de Pasarelas de Pago",
+    "home.serviceTitle3": "Pasarelas de Pago",
+    "home.serviceDescr3":
+      "Experimente una manera fluida de manejar transacciones con nuestra pasarela de pago segura y eficiente.",
+    "home.serviceAlt4": "Ícono de Impuestos",
+    "home.serviceTitle4": "Impuestos Corporativos",
+    "home.serviceDescr4":
+      "Optimiza tu empresa con nuestra experta preparación de impuestos corporativos en EE. UU. ¡Maximiza beneficios!",
     "home.aboutTitle": "Acerca De Nosotros",
     "home.aboutSubtitle": "Quiénes Somos",
     "home.aboutDescrp":
-      "Somos una empresa privada dedicada a la consultoría, orientación y asesoría en la liquidación de impuestos en EE. UU para personas naturales y corporaciones. Además brindamos servicios de marketing digital, desarrollo web y de aplicaciones móviles. Nuestra experiencia probada en el mercado y nuestra atención personalizada nos destaca del resto. ¡Confía en nosotros para impulsar tu éxito!",
+      "En PC Apps International LLC, estamos dedicados a proporcionar soluciones tecnológicas que no solo satisfacen las necesidades actuales de nuestros clientes, sino que también preparan a las empresas para el futuro. Nuestro enfoque en la calidad y la innovación nos permite ofrecer servicios que realmente marcan la diferencia en el crecimiento y éxito de nuestros clientes.",
     "home.aboutBtn": "Ver Más",
     "home.aboutAlt": "Imágen Sobre Nosotros",
     "about.presentTitle": "¿Quiénes Somos?",
     "about.presentSubtitle":
       "Estamos en una misión de ayudar personas por todo el mundo",
     "about.presentText":
-      "Buscamos asesorar a nuestros clientes, optimizando su situación fiscal para alcanzar el éxito financiero a través de una planificación estartégica efectiva.",
+      "Buscamos guiar a nuestros clientes en la optimización de su presencia digital, logrando el éxito empresarial a través de soluciones tecnológicas innovadoras.",
     "about.visionTitle": "Nuestra Visión",
     "about.visionText":
-      "Convertirnos en el socio de confianza para nuestros clientes en el ámbito de la preparación de impuestos y la consultoría estratégica. Buscamos ser una empresa innovadora y tecnológicamente avanzada que brinden soluciones a nuestros clientes para lograr sus metas financieras y de crecimiento.",
+      "Nuestra visión es ser innovadores en la industria tecnológica, reconocidos por nuestra excelencia en la entrega de soluciones integrales y personalizadas. Aspiramos a transformar la manera en que las empresas gestionan sus operaciones y se conectan con sus clientes, mediante la implementación de tecnologías avanzadas y estrategias de marketing digital efectivas.",
     "about.missionTitle": "Nuestra Misión",
     "about.missionText":
-      "Brindar servicios de preparación de impuestos y consultoría estratégica a personas naturales y pe queñas empresas en Estados Unidos. Nos comprometemos a ofrecer soluciones integrales y personalizadas que cumplan con los más altos estándares de calidad y ética profesional.",
+      "Nuestra misión en PC Apps International LLC es proporcionar soluciones tecnológicas innovadoras y productivas que impulsen el éxito de nuestros clientes. Nos comprometemos a ofrecer productos y servicios de alta calidad en tecnología, ayudando a las empresas a mejorar su eficiencia que obtengan satisfacción de sus clientes.",
     "about.contactTitle": "Contacto",
     "about.contactSubtitle":
       "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
@@ -186,6 +193,7 @@ export const ui = {
     "about.formMessagePlaceholder": "Ingrese su mensaje",
     "about.formBtn": "Enviar Mensaje",
     "about.formErrorName": "Por favor ingrese su nombre",
+    "about.formErrorName2": "El nombre debe tener máximo 50 caracteres",
     "about.formErrorEmail": "Por favor ingrese su email",
     "about.formErrorEmail2": "Formato inválido de email",
     "about.formErrorPhone": "Por favor ingrese su teléfono",
@@ -201,5 +209,13 @@ export const ui = {
       "Diligencia el siguiente formulario y recibe asesoría por parte de nuestro equipo de profesionales",
     "email.success": "Email enviado exitosamente",
     "email.error": "Error enviando email",
+    "services.mobileApp": "Aplicaciones Móviles",
+    "services.webDesign": "Diseño Web",
+    "services.paymentGateway": "Pasarelas de Pago",
+    "products.rfid": "RFID",
+    "error.404": "ERROR 404",
+    "error.text": "No pudimos encotrar la página que estás buscando",
+    "error.btn": "Ir a Inicio",
+    "error.oops":"Ups!"
   },
 };

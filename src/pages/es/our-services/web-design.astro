@@ -1,0 +1,146 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import { SmallForm } from "../../../components/SmallForm";
+import photo from "../../../assets/imagess/web-design.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Diseño Web"
+  description={`Diseñamos páginas web atractivas y prácticas que denoten la identidad de tu marca. Nuestro equipo de diseñadores y desarrolladores web colabora estrechamente con tu empresa para comprender sus requerimientos y metas.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Diseño Web
+  </h1>
+  <main class="flex flex-col full:flex-row w-full">
+    <section
+      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+    >
+      <div class="w-full flex flex-col gap-6">
+        <h2 class="text-3xl laptop:text-4xl font-bold">Diseño Web</h2>
+        <p class="text-left">
+          En PC Apps International LLC, nos especializamos en el diseño de
+          páginas web <strong>personalizadas</strong> y <strong
+            >responsivas</strong
+          > que no solo reflejan la identidad y valores de su empresa, sino que también
+          proporcionan un valor agregado significativo a su presencia en línea.
+        </p>
+      </div>
+      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+      <h3 class="text-3xl font-semibold pt-6">¿En Qué Consiste?</h3>
+      <ol
+        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+      >
+        <li>
+          <span class="font-semibold text-xl"
+            >Diseños Únicos y Personalizados:</span
+          >
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Nos aseguramos de
+              que cada sitio web sea una representación auténtica de su marca, utilizando
+              diseños exclusivos y personalizaciones que diferencian su negocio de
+              la competencia.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Fortalece la identidad
+              de su marca, creando una impresión memorable y profesional para los
+              visitantes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Optimización para Motores de Búsqueda (SEO):
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Implementamos prácticas
+              de SEO avanzadas desde el inicio, garantizando que su sitio web sea
+              fácilmente encontrado por su público objetivo en los motores de búsqueda.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mayor visibilidad en
+              línea, incremento en el tráfico orgánico y mejora en las posiciones
+              de búsqueda, lo que lleva a más oportunidades de negocio.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Diseño Responsivo y Amigable para Móviles:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Creamos sitios web
+              que se adaptan perfectamente a cualquier dispositivo, asegurando una
+              experiencia de usuario óptima tanto en móviles como en computadoras
+              de escritorio.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mayor accesibilidad
+              para los usuarios, reducción de la tasa de rebote y una mejor experiencia
+              de navegación que fomenta el retorno de los visitantes.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Integración con Herramientas y Plataformas de Marketing Digital:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Integramos su sitio
+              web con las últimas herramientas de marketing digital, como Google
+              Analytics, plataformas de email marketing y redes sociales, para maximizar
+              su alcance y efectividad.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Mejora en la capacidad
+              de seguimiento y análisis del comportamiento de los usuarios, permitiéndole
+              ajustar sus estrategias de marketing para obtener mejores resultados.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <span class="font-semibold text-xl"
+            >Soporte y Mantenimiento Continuo:
+          </span>
+          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
+            <li>
+              <span class="font-semibold">Valor Agregado:</span> Ofrecemos servicios
+              de soporte y mantenimiento continuo para asegurarnos de que su sitio
+              web funcione sin problemas y esté siempre actualizado con las últimas
+              tecnologías y estándares de seguridad.
+            </li>
+            <li>
+              <span class="font-semibold">Beneficios:</span> Tranquilidad y ahorro
+              de tiempo, ya que puede confiar en nosotros para gestionar los aspectos
+              técnicos y mantener su sitio web seguro y operativo.
+            </li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section
+      class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
+      laptop:px-8 py-12"
+    >
+      <div class="flex flex-col items-center gap-3">
+        <h3 class="text-3xl font-semibold text-center">
+          {t("nav.contactBtn")}
+        </h3>
+        <p class="text-center">{t("contact.formText")}</p>
+      </div>
+      <SmallForm lang={theLang} client:only />
+    </section>
+  </main>
+</Layout>
