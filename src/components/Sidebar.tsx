@@ -1,11 +1,12 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getLangReact, useTranslations } from "../i18n/utils";
-import type { Service } from "../modals";
+import type { Dropdown, Service } from "../modals";
 import "../index.css";
 import { Close } from "./myIcons/Close";
 import { Translate } from "./myIcons/Translate";
 import { Logo } from "./myIcons/Logo";
 import { ServicesSidebar } from "./ServicesSidebar";
+import { ProductsSidebar } from "./ProductsSidebar";
 
 export const Sidebar = ({
   openSidebar,
@@ -23,7 +24,10 @@ export const Sidebar = ({
   const lang = getLangReact(link);
   const t = useTranslations(lang as "es" | "en");
 
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState<Dropdown>({
+    services: false,
+    products: false,
+  });
   let extraPaths = [];
   if (lang === "en") {
     extraPaths = link.split("/").slice(3);
@@ -115,11 +119,17 @@ export const Sidebar = ({
           </span>
         </a>
         <ServicesSidebar
-          isDropdownOpen={isDropdownOpen}
+          isDropdownOpen={isDropdownOpen.services}
           setIsDropdownOpen={setIsDropdownOpen}
           path={activeLink}
           lang={lang}
           allServices={allServices}
+        />
+        <ProductsSidebar
+          isDropdownOpen={isDropdownOpen.products}
+          setIsDropdownOpen={setIsDropdownOpen}
+          path={activeLink}
+          lang={lang}
         />
         <div className="w-full text-center my-6">
           <a

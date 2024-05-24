@@ -2,27 +2,21 @@ import { useTranslations } from "../i18n/utils";
 import type { Dropdown, Service } from "../modals";
 import { ChevrownDown } from "./myIcons/ChevrownDown";
 
-export const ServicesSidebar = ({
+export const ProductsSidebar = ({
   isDropdownOpen,
   setIsDropdownOpen,
   path,
   lang,
-  allServices,
 }: {
   isDropdownOpen: boolean;
   setIsDropdownOpen: (value: any) => void;
   path: string;
   lang: "en" | "es";
-  allServices: Service[];
 }) => {
   const t = useTranslations(lang);
-  /*   const filteredServices = allServices.map((serv) => serv.data);
-  const categories = [...new Set(filteredServices.map((s) => s.group))]; */
-  const categories = ["mobile-app", "web-design", "payment-gateway"];
+  const categories = ["rfid"];
   const names = {
-    "mobile-app": "mobileApp",
-    "web-design": "webDesign",
-    "payment-gateway": "paymentGateway",
+    rfid: "rfid",
   };
   type NamesKey = keyof typeof names;
 
@@ -37,23 +31,21 @@ export const ServicesSidebar = ({
     >
       <button
         className="flex w-full transiton duration-300 hover:pl-4 justify-between items-center"
-        onClick={() =>
-          setIsDropdownOpen((prev: Dropdown) => {
+        onClick={() => setIsDropdownOpen((prev: Dropdown) => {
             return {
               ...prev,
-              services: !isDropdownOpen,
+              products: !isDropdownOpen,
             };
-          })
-        }
+          })}
       >
         <span
           className={`border-2 border-transparent ${
-            path === "our-services"
+            path === "products"
               ? "border-b-blue text-blue font-bold"
               : "border-b-transparent text-black"
           }`}
         >
-          {t("nav.services")}
+          {t("nav.products")}
         </span>
         <ChevrownDown />
       </button>
@@ -65,10 +57,10 @@ export const ServicesSidebar = ({
 
               <a
                 key={category}
-                href={`${lang === "en" ? "" : "/es"}/our-services/${category}`}
+                href={`${lang === "en" ? "" : "/es"}/products/${category}`}
                 className=" transition-all duration-200 hover:px-4 hover:text-blue"
               >
-                {t(`services.${names[category as NamesKey]}` as any)}
+                {t(`products.${names[category as NamesKey]}` as any)}
               </a>
             </div>
           );

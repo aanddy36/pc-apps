@@ -1,0 +1,39 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const serviceNav = lang === "en" ? "" : "/es";
+const t = useTranslations(lang);
+/* const allServices = await getCollection("theServices", ({ id }) => {
+  return id.startsWith(lang + "/");
+}); */
+
+interface Props {
+  category: string;
+}
+
+const { category } = Astro.props;
+
+const names = {
+  rfid: "rfid",
+};
+
+type NamesKey = keyof typeof names;
+---
+
+<div class="flex flex-col gap-2 p-4 border-t rounded-lg">
+  <!-- AQUI IRIA EL TITULO SI HAY MAS CATEGORIAS -->
+  <!-- <h5 class="font-semibold">{category}</h5> -->
+  <div class="flex flex-col gap-2 pl-2 w-full">
+    {
+      (
+        <a
+          href={`${serviceNav}/products/${category}`}
+          class=" transition-all duration-200 hover:px-4 hover:text-blue"
+        >
+          {t(`products.${names[category as NamesKey]}` as any)}
+        </a>
+      )
+    }
+  </div>
+</div>

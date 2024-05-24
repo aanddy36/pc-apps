@@ -1,0 +1,53 @@
+---
+import chevron from "../assets/down-arrow.png";
+import { Image } from "astro:assets";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import ProductOptions from "./ProductOptions.astro";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+let activeLink = "";
+if (lang === "en") {
+  activeLink = Astro.request.url.split("/")[3];
+} else {
+  activeLink = Astro.request.url.split("/")[4];
+}
+
+const categories = ["rfid"];
+---
+
+<div class="relative">
+  <div
+    id="product"
+    class={`flex gap-2 items-center transition-all duration-200 hover:text-blue relative z-[10]
+    hover:border-b-2 hover:border-b-blue border-2 border-transparent cursor-pointer
+    ${activeLink === "products" && " text-blue opacity-100 border-b-2 border-b-blue font-bold"}`}
+  >
+    <li>{t("nav.products")}</li>
+    <Image src={chevron} alt="Arrow" />
+  </div>
+  <div
+    class="absolute left-[-15px] top-[-15px] pt-14 hidden z-[5]"
+    id="ser-dropdown-menu"
+  >
+    <ul
+      class="w-[300px] flex flex-col shadow-md shadow-black/30 rounded-lg bg-bg"
+    >
+      {
+        categories.map((cat) => {
+          return <ProductOptions category={cat} />;
+        })
+      }
+    </ul>
+  </div>
+</div>
+<script type="module">
+  const selector = document.getElementById("product");
+  const dropdown = document.getElementById("ser-dropdown-menu");
+  selector.addEventListener("mouseenter", () => {
+    dropdown.style.display = "block";
+  });
+  dropdown.addEventListener("mouseleave", () => {
+    dropdown.style.display = "none";
+  });
+</script>

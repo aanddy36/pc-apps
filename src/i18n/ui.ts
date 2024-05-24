@@ -12,6 +12,7 @@ export const ui = {
     "nav.home": "Home",
     "nav.whoweare": "Who We Are",
     "nav.services": "Services",
+    "nav.products": "Products",
     "nav.contactBtn": "Contact Us",
     "nav.altLogo": "PC APPS logo",
     "nav.toggleBar": "Open sidebar",
@@ -30,8 +31,7 @@ export const ui = {
     "home.imageSubtext2":
       "We build user-friendly mobile apps that meet your needs. Let's turn your concept into reality!",
     "home.imageBtn2": "See Mobile Apps",
-    "home.imageHeader1":
-      "Build your online presence",
+    "home.imageHeader1": "Build your online presence",
     "home.imageSubtext1":
       "We create websites that help your business stand out and beyond. Let's get started today!",
     "home.imageBtn1": "See Web Design",
@@ -88,6 +88,7 @@ export const ui = {
     "about.formMessagePlaceholder": "Insert your message",
     "about.formBtn": "Send Message",
     "about.formErrorName": "Please insert your name",
+    "about.formErrorName2": "The name must have less than 50 characters",
     "about.formErrorEmail": "Please insert your email",
     "about.formErrorEmail2": "Invalid email format",
     "about.formErrorPhone": "Please insert your phone",
@@ -107,11 +108,16 @@ export const ui = {
     "services.webDesign": "Web Design",
     "services.paymentGateway": "Payment Gateways",
     "products.rfid": "RFID",
+    "error.404": "404 ERROR",
+    "error.text": "We can't seem to find the page you're looking for",
+    "error.btn": "Go Home",
+    "error.oops":"Oops!"
   },
   es: {
     "nav.home": "Inicio",
     "nav.whoweare": "Quiénes Somos",
     "nav.services": "Servicios",
+    "nav.products": "Productos",
     "nav.contactBtn": "Contáctanos",
     "nav.altLogo": "Logo de PC APPS",
     "nav.toggleBar": "Abrir menú lateral",
@@ -126,13 +132,11 @@ export const ui = {
     "footer.fbAlt": "Logo de Facebook",
     "footer.igAlt": "Logo de Instagram",
     "footer.ytAlt": "Logo de YouTube",
-    "home.imageHeader2":
-      "Transforma tus ideas en aplicaciones",
+    "home.imageHeader2": "Transforma tus ideas en aplicaciones",
     "home.imageSubtext2":
       "Creamos aplicaciones móviles fáciles de usar que se adaptan a sus necesidades. ¡Convirtamos su concepto en realidad!",
     "home.imageBtn2": "Ver Aplicaciones Móviles",
-    "home.imageHeader1":
-      "Construya su presencia en línea",
+    "home.imageHeader1": "Construya su presencia en línea",
     "home.imageSubtext1":
       "Creamos sitios web que ayudan a su negocio a destacarse y más allá. ¡Comencemos hoy mismo!",
     "home.imageBtn1": "Ver Diseño Web",
@@ -189,6 +193,7 @@ export const ui = {
     "about.formMessagePlaceholder": "Ingrese su mensaje",
     "about.formBtn": "Enviar Mensaje",
     "about.formErrorName": "Por favor ingrese su nombre",
+    "about.formErrorName2": "El nombre debe tener máximo 50 caracteres",
     "about.formErrorEmail": "Por favor ingrese su email",
     "about.formErrorEmail2": "Formato inválido de email",
     "about.formErrorPhone": "Por favor ingrese su teléfono",
@@ -208,5 +213,9 @@ export const ui = {
     "services.webDesign": "Diseño Web",
     "services.paymentGateway": "Pasarelas de Pago",
     "products.rfid": "RFID",
+    "error.404": "ERROR 404",
+    "error.text": "No pudimos encotrar la página que estás buscando",
+    "error.btn": "Ir a Inicio",
+    "error.oops":"Ups!"
   },
 };
