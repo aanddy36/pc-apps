@@ -10,7 +10,6 @@ export const WhatsappBtn = ({ lang }: { lang: "en" | "es" }) => {
       target="_blank"
       rel="noopener noreferrer"
       href={`https://wa.me/573002781618?text=${messages[lang]}`}
-      className=" fixed bottom-12 right-12 z-50"
     >
       <img
         src={whatsapp.src}

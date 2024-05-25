@@ -1,0 +1,109 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import photo from "../../../assets/imagess/digital-marketing.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Marketing Digital"
+  description={`Estamos aquí para impulsar el éxito de tu negocio a través de estrategias de marketing digital efectivas y resultados tangibles. Con nuestra experiencia y compromiso, te ayudamos a destacarte en línea y alcanzar tus objetivos comerciales de manera sostenible.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Marketing Digital
+  </h1>
+  <main
+    class="flex flex-col w-full py-14 px-[5%] full:px-[15%] min-[1400px]:px-[20%] gap-10"
+  >
+    <div class="w-full flex flex-col gap-6">
+      <h2 class="text-3xl laptop:text-5xl font-bold">Marketing Digital</h2>
+      <p class="text-left">
+        Estamos aquí para impulsar el éxito de tu negocio a través de
+        estrategias de marketing digital efectivas y resultados tangibles. Con
+        nuestra experiencia y compromiso, te ayudamos a <strong
+          >destacarte en línea</strong
+        > y
+        <strong>alcanzar tus objetivos comerciales de manera sostenible.</strong
+        >
+      </p>
+    </div>
+    <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+    <h3 class="text-3xl font-semibold pt-6">¿En Qué Consiste?</h3>
+    <ol
+      class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+    >
+      <li>
+        <span class="font-semibold text-xl">Estrategias Personalizadas:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            Entendemos que cada negocio es único, por lo que desarrollamos
+            estrategias de marketing digital personalizadas que se adaptan a tus
+            necesidades específicas y objetivos comerciales. Desde el aumento de
+            la visibilidad en línea hasta la generación de leads de calidad,
+            estamos aquí para ayudarte a alcanzar tus metas.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Presencia en Línea Sólida:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            Construimos y fortalecemos tu presencia en línea a través de una
+            combinación de técnicas probadas y herramientas de vanguardia. Desde
+            la optimización de motores de búsqueda (SEO) hasta la gestión de
+            redes sociales, te ayudamos a destacarte en un mercado cada vez más
+            competitivo.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Generación de Leads Cualificados:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            No se trata solo de aumentar el tráfico a tu sitio web, sino de
+            atraer a clientes potenciales que estén genuinamente interesados en
+            tus productos o servicios. Con nuestras estrategias de marketing de
+            contenido, publicidad digital y más, te conectamos con leads de alta
+            calidad que impulsan el crecimiento de tu negocio.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Análisis y Optimización Continua:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            La clave del éxito en el marketing digital es la capacidad de
+            adaptarse y mejorar constantemente. Utilizamos datos y análisis en
+            tiempo real para evaluar el rendimiento de tus campañas y realizar
+            ajustes estratégicos según sea necesario, asegurando así que
+            obtengas los mejores resultados posibles.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Asesoramiento Experto y Soporte Dedicado:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            En PCAPPSINT LLC, no solo somos tu equipo de marketing digital, sino
+            también tu socio de confianza. Nuestro equipo de expertos está
+            siempre disponible para responder tus preguntas, ofrecer
+            asesoramiento estratégico y brindarte el apoyo que necesitas en cada
+            paso del camino.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </main>
+</Layout>

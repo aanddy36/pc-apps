@@ -39,7 +39,7 @@ export const ui = {
     "home.imageSubtext3":
       "Make transactions easy for your customers. Our solution is secure and reliable",
     "home.imageBtn3": "See Payment Gateway",
-    "home.serviceTitle": "Our Services",
+    "home.serviceTitle": "Our Services & Products",
     "home.serviceSubtitle": "Some Of The Services We Provide",
     "home.serviceBtn": "See More",
     "home.serviceAlt1": "Pc Icon",
@@ -55,9 +55,9 @@ export const ui = {
     "home.serviceDescr3":
       "Experience a seamless way to handle transactions with our secure and efficient payment gateway.",
     "home.serviceAlt4": "Taxes Icon",
-    "home.serviceTitle4": "Corporate Tax",
+    "home.serviceTitle4": "Weru App",
     "home.serviceDescr4":
-      "Optimize your company with our expert corporate tax preparation service in the U.S. Maximize profits!",
+      "Digitalize service orders, optimizing planning, scheduling, assignment, supervision, and tracking, reducing delays, costs, and paper usage.",
     "home.aboutTitle": "About Us",
     "home.aboutSubtitle": "Who We Are",
     "home.aboutDescrp":
@@ -107,11 +107,13 @@ export const ui = {
     "services.mobileApp": "Mobile Apps",
     "services.webDesign": "Web Design",
     "services.paymentGateway": "Payment Gateways",
+    "services.digitalMarketing": "Digital Marketing",
     "products.rfid": "RFID",
+    "products.weruApp": "Weru App",
     "error.404": "404 ERROR",
     "error.text": "We can't seem to find the page you're looking for",
     "error.btn": "Go Home",
-    "error.oops":"Oops!"
+    "error.oops": "Oops!",
   },
   es: {
     "nav.home": "Inicio",
@@ -144,7 +146,7 @@ export const ui = {
     "home.imageSubtext3":
       "Haga que las transacciones sean fáciles para sus clientes. Nuestra solución es segura y confiable",
     "home.imageBtn3": "Ver Pasarelas de Pago",
-    "home.serviceTitle": "Nuestros Servicios",
+    "home.serviceTitle": "Nuestros Servicios y Productos",
     "home.serviceSubtitle": "Algunos De Los Servicios Que Ofrecemos",
     "home.serviceBtn": "Ver Más",
     "home.serviceAlt1": "Ícono de PC",
@@ -160,9 +162,9 @@ export const ui = {
     "home.serviceDescr3":
       "Experimente una manera fluida de manejar transacciones con nuestra pasarela de pago segura y eficiente.",
     "home.serviceAlt4": "Ícono de Impuestos",
-    "home.serviceTitle4": "Impuestos Corporativos",
+    "home.serviceTitle4": "Weru App",
     "home.serviceDescr4":
-      "Optimiza tu empresa con nuestra experta preparación de impuestos corporativos en EE. UU. ¡Maximiza beneficios!",
+      "Digitaliza órdenes de servicio, optimizando planeación, programación, asignación, supervisión y seguimiento, reduciendo retrasos, costos y uso de papel.",
     "home.aboutTitle": "Acerca De Nosotros",
     "home.aboutSubtitle": "Quiénes Somos",
     "home.aboutDescrp":
@@ -212,10 +214,12 @@ export const ui = {
     "services.mobileApp": "Aplicaciones Móviles",
     "services.webDesign": "Diseño Web",
     "services.paymentGateway": "Pasarelas de Pago",
+    "services.digitalMarketing": "Marketing Digital",
     "products.rfid": "RFID",
+    "products.weruApp": "Weru App",
     "error.404": "ERROR 404",
     "error.text": "No pudimos encotrar la página que estás buscando",
     "error.btn": "Ir a Inicio",
-    "error.oops":"Ups!"
+    "error.oops": "Ups!",
   },
 };

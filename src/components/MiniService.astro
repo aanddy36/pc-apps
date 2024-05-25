@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import payment from "../assets/payment.png";
 import pc from "../assets/pc.png";
 import app from "../assets/app.png";
+import energy from "../assets/energy.png";
 import Button from "./Button.astro";
 
 const lang = getLangFromUrl(Astro.url);
@@ -15,7 +16,7 @@ interface Props {
 }
 
 const { position, path } = Astro.props;
-const imagesArray = [pc, app, payment];
+const imagesArray = [pc, app, payment,energy];
 ---
 
 <div class="flex flex-col items-center gap-5">

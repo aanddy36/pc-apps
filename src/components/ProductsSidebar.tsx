@@ -14,9 +14,10 @@ export const ProductsSidebar = ({
   lang: "en" | "es";
 }) => {
   const t = useTranslations(lang);
-  const categories = ["rfid"];
+  const categories = ["rfid","weru-app"];
   const names = {
     rfid: "rfid",
+    "weru-app": "weruApp",
   };
   type NamesKey = keyof typeof names;
 
@@ -31,12 +32,14 @@ export const ProductsSidebar = ({
     >
       <button
         className="flex w-full transiton duration-300 hover:pl-4 justify-between items-center"
-        onClick={() => setIsDropdownOpen((prev: Dropdown) => {
+        onClick={() =>
+          setIsDropdownOpen((prev: Dropdown) => {
             return {
               ...prev,
               products: !isDropdownOpen,
             };
-          })}
+          })
+        }
       >
         <span
           className={`border-2 border-transparent ${

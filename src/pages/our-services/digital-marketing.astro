@@ -1,0 +1,102 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import photo from "../../assets/imagess/digital-marketing.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Digital Marketing"
+  description={`We are here to drive your business success through effective digital marketing strategies and tangible results. With our expertise and commitment, we help you stand out online and achieve your business goals sustainably.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Digital Marketing
+  </h1>
+  <main
+    class="flex flex-col w-full py-14 px-[5%] full:px-[15%] min-[1400px]:px-[20%] gap-10"
+  >
+    <div class="w-full flex flex-col gap-6">
+      <h2 class="text-3xl laptop:text-5xl font-bold">Digital Marketing</h2>
+      <p class="text-left">
+        We are here to drive your business success through effective digital
+        marketing strategies and tangible results. With our expertise and
+        commitment, we help you <strong>stand out online</strong> and <strong
+          >achieve your business goals sustainably.</strong
+        >
+      </p>
+    </div>
+    <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+    <h3 class="text-3xl font-semibold pt-6">What Does It Involve?</h3>
+    <ol
+      class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+    >
+      <li>
+        <span class="font-semibold text-xl">Personalized Strategies:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            We understand that every business is unique, so we develop
+            personalized digital marketing strategies tailored to your specific
+            needs and business objectives. From increasing online visibility to
+            generating quality leads, we are here to help you reach your goals.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Solid Online Presence:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            We build and strengthen your online presence through a combination
+            of proven techniques and cutting-edge tools. From search engine
+            optimization (SEO) to social media management, we help you stand out
+            in an increasingly competitive market.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Generation of Qualified Leads:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            It’s not just about increasing traffic to your website, but
+            attracting potential customers who are genuinely interested in your
+            products or services. With our content marketing strategies, digital
+            advertising, and more, we connect you with high-quality leads that
+            drive your business growth.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Continuous Analysis and Optimization:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            The key to success in digital marketing is the ability to adapt and
+            continuously improve. We use real-time data and analytics to
+            evaluate the performance of your campaigns and make strategic
+            adjustments as needed, ensuring you get the best possible results.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Expert Advice and Dedicated Support:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            At PCAPPSINT LLC, we are not just your digital marketing team but
+            also your trusted partner. Our team of experts is always available
+            to answer your questions, offer strategic advice, and provide the
+            support you need every step of the way.
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </main>
+</Layout>

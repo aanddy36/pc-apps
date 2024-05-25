@@ -19,114 +19,105 @@ font-extrabold text-center text-white"
   >
     Web Design
   </h1>
-  <main class="flex flex-col full:flex-row w-full">
-    <section
-      class="grow flex flex-col px-4 pt-10 pb-16 laptop:px-16 gap-6 items-start"
+  <main
+    class="flex flex-col w-full py-14 px-[5%] full:px-[15%] min-[1400px]:px-[20%] gap-10"
+  >
+    <div class="w-full flex flex-col gap-6">
+      <h2 class="text-3xl laptop:text-5xl font-bold">Web Design</h2>
+      <p class="text-left">
+        At PC Apps International LLC, we specialize in designing <strong
+          >customized</strong
+        >
+        and <strong>responsive</strong> websites that not only reflect your company's
+        identity and values but also provide significant added value to your online
+        presence.
+      </p>
+    </div>
+    <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+    <h3 class="text-3xl font-semibold pt-6">What Does It Involve?</h3>
+    <ol
+      class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
     >
-      <div class="w-full flex flex-col gap-6">
-        <h2 class="text-3xl laptop:text-4xl font-bold">Web Design</h2>
-        <p class="text-left">
-          At PC Apps International LLC, we specialize in designing <strong
-            >customized</strong
-          >
-          and <strong>responsive</strong> websites that not only reflect your company's
-          identity and values but also provide significant added value to your online
-          presence.
-        </p>
-      </div>
-      <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
-      <h3 class="text-3xl font-semibold pt-6">What Does It Involve?</h3>
-      <ol
-        class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
-      >
-        <li>
-          <span class="font-semibold text-xl">Unique and Custom Designs:</span>
-          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
-            <li>
-              <span class="font-semibold">Added Value:</span> We ensure that each
-              website is an authentic representation of your brand, using exclusive
-              designs and customizations that set your business apart from the competition.
-            </li>
-            <li>
-              <span class="font-semibold">Benefits:</span> Strengthens your brand
-              identity, creating a memorable and professional impression for visitors.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="font-semibold text-xl"
-            >Search Engine Optimization (SEO):
-          </span>
-          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
-            <li>
-              <span class="font-semibold">Added Value:</span> We implement advanced
-              SEO practices from the outset, ensuring your website is easily found
-              by your target audience on search engines.
-            </li>
-            <li>
-              <span class="font-semibold">Benefits:</span> Increased online visibility,
-              growth in organic traffic, and improved search rankings, leading to
-              more business opportunities.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="font-semibold text-xl"
-            >Responsive and Mobile-Friendly Design:
-          </span>
-          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
-            <li>
-              <span class="font-semibold">Added Value:</span> We create websites
-              that perfectly adapt to any device, ensuring an optimal user experience
-              on both mobile devices and desktop computers.
-            </li>
-            <li>
-              <span class="font-semibold">Benefits:</span> Greater accessibility
-              for users, reduced bounce rates, and a better browsing experience that
-              encourages return visits.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="font-semibold text-xl"
-            >Integration with Digital Marketing Tools and Platforms:
-          </span>
-          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
-            <li>
-              <span class="font-semibold">Added Value:</span> We integrate your website
-              with the latest digital marketing tools, such as Google Analytics,
-              email marketing platforms, and social media, to maximize your reach
-              and effectiveness.
-            </li>
-            <li>
-              <span class="font-semibold">Benefits:</span> Enhanced ability to track
-              and analyze user behavior, allowing you to adjust your marketing strategies
-              for better results.
-            </li>
-          </ul>
-        </li>
-        <li>
-          <span class="font-semibold text-xl"
-            >Ongoing Support and Maintenance:
-          </span>
-          <ul class="pl-12 py-4 list-disc list-inside flex flex-col gap-4">
-            <li>
-              <span class="font-semibold">Added Value:</span> We offer continuous
-              support and maintenance services to ensure your website runs smoothly
-              and is always up-to-date with the latest technologies and security
-              standards.
-            </li>
-            <li>
-              <span class="font-semibold">Benefits:</span> Peace of mind and time
-              savings, as you can rely on us to manage the technical aspects and
-              keep your website secure and operational.
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </section>
+      <li>
+        <span class="font-semibold text-xl">Unique and Custom Designs:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col">
+          <li>
+            We ensure that each website is an authentic representation of your
+            brand, using exclusive designs and customizations that set your
+            business apart from the competition.
+          </li>
+          <li>
+            Strengthens your brand identity, creating a memorable and
+            professional impression for visitors.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Search Engine Optimization (SEO):
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            We implement advanced SEO practices from the outset, ensuring your
+            website is easily found by your target audience on search engines.
+          </li>
+          <li>
+            Increased online visibility, growth in organic traffic, and improved
+            search rankings, leading to more business opportunities.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Responsive and Mobile-Friendly Design:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            We create websites that perfectly adapt to any device, ensuring an
+            optimal user experience on both mobile devices and desktop
+            computers.
+          </li>
+          <li>
+            Greater accessibility for users, reduced bounce rates, and a better
+            browsing experience that encourages return visits.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Integration with Digital Marketing Tools and Platforms:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            We integrate your website with the latest digital marketing tools,
+            such as Google Analytics, email marketing platforms, and social
+            media, to maximize your reach and effectiveness.
+          </li>
+          <li>
+            Enhanced ability to track and analyze user behavior, allowing you to
+            adjust your marketing strategies for better results.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Ongoing Support and Maintenance:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            We offer continuous support and maintenance services to ensure your
+            website runs smoothly and is always up-to-date with the latest
+            technologies and security standards.
+          </li>
+          <li>
+            Peace of mind and time savings, as you can rely on us to manage the
+            technical aspects and keep your website secure and operational.
+          </li>
+        </ul>
+      </li>
+    </ol>
 
-    <section
+    <!--     <section
       class="bg-sectionBg w-full min-[1500px]:min-w-[800px] full:min-w-[460px] flex flex-col items-center gap-8 px-4 tablet:px-4
       laptop:px-8 py-12"
     >
@@ -137,6 +128,6 @@ font-extrabold text-center text-white"
         <p class="text-center">{t("contact.formText")}</p>
       </div>
       <SmallForm lang={theLang} client:only />
-    </section>
+    </section> -->
   </main>
 </Layout>
