@@ -11,6 +11,7 @@ import Footer from "../components/sections/Footer.astro";
 import "../index.css";
 import { WhatsappBtn } from "../components/WhatsappBtn";
 import ProductsDropdown from "../components/ProductsDropdown.astro";
+import MailUsBtn from "../components/MailUsBtn.astro";
 
 const lang = getLangFromUrl(Astro.url);
 let activeLink = "";
@@ -58,7 +59,7 @@ const { title, description } = Astro.props;
     <meta name="twitter:image" content="https://pcappsint.com/pc-logo.png" />
     <title>{`PC APPS | ${title}`}</title>
   </head>
-  <body class="bg-bg flex flex-col min-h-screen">
+  <body class="bg-bg flex flex-col min-h-screen relative">
     <NewNavbar link={link} allServices={allServices} client:load>
       <a href={`${lang === "en" ? "/" : "/es"}`}>
         <Image src={logoPcApps} alt={t("nav.altLogo")} width="140" />
@@ -97,7 +98,10 @@ const { title, description } = Astro.props;
     <div class="grow">
       <slot />
     </div>
-    <WhatsappBtn lang={lang} client:load />
+    <div class="flex flex-col gap-6 fixed bottom-12 right-12 z-50">
+      <MailUsBtn />
+      <WhatsappBtn lang={lang} client:load />
+    </div>
     <Footer />
   </body>
 </html>

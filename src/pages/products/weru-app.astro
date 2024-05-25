@@ -1,0 +1,112 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import photo from "../../assets/imagess/weru-app.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Weru App"
+  description={`By implementing the WERU APP software, we offer to digitalize service or work orders to efficiently carry out the planning, scheduling, assignment, generation, supervision, and tracking of these orders.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Weru App
+  </h1>
+  <main
+    class="flex flex-col w-full py-14 px-[5%] full:px-[15%] min-[1400px]:px-[20%] gap-10"
+  >
+    <div class="w-full flex flex-col gap-6">
+      <h2 class="text-3xl laptop:text-5xl font-bold">Weru App</h2>
+      <p class="text-left">
+        At PC Apps International LLC, we offer technology solutions through the
+        WERU APP software, which <strong
+          >addresses problems in activities requiring home service</strong
+        >, such as delays in service, technicians arriving late to visits, high
+        fuel consumption for transportation, use of paper for work orders, among
+        others.
+      </p>
+      <p>
+        By implementing the WERU APP software, we offer to digitalize service or
+        work orders to efficiently carry out the planning, scheduling,
+        assignment, generation, supervision, and tracking of these orders.
+      </p>
+    </div>
+    <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+    <h3 class="text-3xl font-semibold pt-6">What Does It Involve?</h3>
+    <ol
+      class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+    >
+      <li>
+        <span class="font-semibold text-xl">Team management:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            The software allows scheduling work for the company's technicians,
+            keeping them connected online throughout the entire service process.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">HelpDesk: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            WERU APP creates a central hub that allows your services to make
+            requests, obtain quotes, track operations, and schedule technicians'
+            work.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Cost and Expense Reduction: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            The software reduces the use of paper, transportation costs for
+            technicians, and expenses for service orders and electronic billing,
+            among others.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Team Optimization: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            It enables real-time location tracking of personnel, assists with
+            the control of tools and spare parts, allows for authorizations,
+            quotes, transmission of images and videos, and the creation of
+            digital reports for clients and the company.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Reduced Billing Time: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            WERU APP allows for electronic billing as soon as the contracted
+            technical service is completed, thus reducing the time for client
+            payment and collection.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Types of Companies:</span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>WERU APP is available for the following types of companies:</li>
+          <ul class="flex flex-col list-disc list-inside">
+            <li>Gardening</li>
+            <li>Residential and Commercial Cleaning</li>
+            <li>Refrigeration</li>
+            <li>Solar Energy</li>
+            <li>Energy Generation</li>
+            <li>Technical Assistance</li>
+            <li>Maintenance</li>
+          </ul>
+        </ul>
+      </li>
+    </ol>
+  </main>
+</Layout>

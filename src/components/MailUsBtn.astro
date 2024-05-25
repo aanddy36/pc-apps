@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+import mail from "../assets/email.png";
+---
+
+<a href="/contact">
+  <Image
+    src={mail}
+    alt="Mail Logo"
+    class="w-[60px] h-[60px] cursor-pointer opacity-75 hover:opacity-100 transition-opacity duration-200"
+  />
+</a>

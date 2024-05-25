@@ -1,0 +1,122 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { getLangFromUrl, useTranslations } from "../../../i18n/utils";
+import photo from "../../../assets/imagess/weru-app.jpg";
+import { Image } from "astro:assets";
+
+const theLang = getLangFromUrl(Astro.url);
+const t = useTranslations(theLang as "en" | "es");
+---
+
+<Layout
+  title="Weru App"
+  description={`Mediante la implementación del software WERU APP, ofrecemos digitalizar las ordenes de servicio o trabajo, para realizar eficazmente la planeación, programación, asignación, generación, supervisión y seguimiento a estas órdenes.`}
+>
+  <h1
+    class="w-full py-5 laptop:py-8 bg-blue text-[22px] tablet:text-[26px] laptop:text-3xl
+font-extrabold text-center text-white"
+  >
+    Weru App
+  </h1>
+  <main
+    class="flex flex-col w-full py-14 px-[5%] full:px-[15%] min-[1400px]:px-[20%] gap-10"
+  >
+    <div class="w-full flex flex-col gap-6">
+      <h2 class="text-3xl laptop:text-5xl font-bold">Weru App</h2>
+      <p class="text-left">
+        En PC Apps International LLC, ofrecemos soluciones de tecnología
+        mediante el software WERU APP, que permite <strong
+          >dar solución a problemas presentados en las actividades que requieren
+          atención del trabajo en domicilio del cliente</strong
+        >, como son los retrasos en atención, llegar tarde a las visitas de los
+        técnicos, alto gasto de uso de combustible en transporte, uso de papel
+        en las ordenes de trabajos, entre otros.
+      </p>
+      <p>
+        Mediante la implementación del software WERU APP, ofrecemos digitalizar
+        las ordenes de servicio o trabajo, para realizar eficazmente la
+        planeación, programación, asignación, generación, supervisión y
+        seguimiento a estas órdenes.
+      </p>
+    </div>
+    <Image src={photo} alt={"Service Image"} class={`w-full rounded-lg`} />
+    <h3 class="text-3xl font-semibold pt-6">¿En Qué Consiste?</h3>
+    <ol
+      class="flex flex-col items-start gap-3 list-inside list-decimal text-justify marker:text-xl marker:font-semibold"
+    >
+      <li>
+        <span class="font-semibold text-xl"
+          >Administración del equipo de trabajo:</span
+        >
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            El software permite programar trabajo a los técnicos de la empresa,
+            comunicados en línea durante todo el proceso del servicio.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">HelpDesk: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            WERU APP crea una central, que permite a sus servicios realizar
+            solicitudes, cotizaciones, seguimientos a las operaciones, elaborar
+            cronogramas a los trabajos de los técnicos efectuados.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Reducción de Costos y Gastos:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            El software reduce el uso de papel, gastos de movilización de
+            técnicos, ordenes de servicios y facturaciones electrónicas, entre
+            otras.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Optimización del equipo de trabajo:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            Permite la ubicación en tiempo real al personal de trabajo, ayuda
+            con el control de herramientas y repuestos, permite autorizaciones,
+            cotizaciones, transmisión de imágenes y videos, elaboración de
+            informes digitales a clientes y empresa.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl"
+          >Reduce el tiempo de facturación:
+        </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>
+            WERU APP implementa el poder facturar electrónicamente en cuanto
+            finalice el servicio técnico contratado, logrando así reducir el
+            tiempo de cobro y pago por el cliente.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <span class="font-semibold text-xl">Tipo de Empresas: </span>
+        <ul class="pl-6 laptop:pl-12 py-4 flex flex-col gap-2">
+          <li>WERU APP, está disponible para este tipo de empresas:</li>
+          <ul class="flex flex-col list-disc list-inside">
+            <li>Jardinería</li>
+            <li>Aseo residencial y Empresarial</li>
+            <li>Refrigeración</li>
+            <li>Energía Solar</li>
+            <li>Generadores de Energía</li>
+            <li>Asistencia Técnica</li>
+            <li>Mantenimiento</li>
+          </ul>
+        </ul>
+      </li>
+    </ol>
+  </main>
+</Layout>

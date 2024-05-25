@@ -18,11 +18,17 @@ export const ServicesSidebar = ({
   const t = useTranslations(lang);
   /*   const filteredServices = allServices.map((serv) => serv.data);
   const categories = [...new Set(filteredServices.map((s) => s.group))]; */
-  const categories = ["mobile-app", "web-design", "payment-gateway"];
+  const categories = [
+    "mobile-app",
+    "web-design",
+    "payment-gateway",
+    "digital-marketing",
+  ];
   const names = {
     "mobile-app": "mobileApp",
     "web-design": "webDesign",
     "payment-gateway": "paymentGateway",
+    "digital-marketing": "digitalMarketing",
   };
   type NamesKey = keyof typeof names;
 
